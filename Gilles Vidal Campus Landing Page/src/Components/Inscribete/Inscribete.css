@@ -102,4 +102,20 @@ letter-spacing: 0.96px;
     letter-spacing: 0.96px;
     text-transform: uppercase;
 }
+
+.inscribete-btn{
+    width: 200px;
+}
+.inscribete-btn>p{
+    color: var(--neutro-100, #FFF);
+
+    /* H4 */
+    font-family: Bebas Neue;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 116.667% */
+    letter-spacing: 0.72px;
+    text-transform: uppercase;
+}
 }

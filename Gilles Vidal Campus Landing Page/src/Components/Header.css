@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,900&display=swap');
 
 
-
+.header{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.00) 100%);
+}
 
 .header-content{
     display: flex;
@@ -126,21 +128,44 @@ gap: 16px;
     display: block;
   }
   
-  
-  
-  #hamburguer-open{
+ 
+  .close{
     position: absolute;
     right: 32px;
-    top: 40px;
+    top: 32px;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+
+  
+    
+}
+  .open{
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
   
     
 }
 
-#hamburguer-open-white{
-    position: absolute;
-    right: 32px;
-    top: 40px;
+
+.hamburger-menu.close:hover{
+    cursor: pointer;
+   
+ content:  url(/Azul@3x.svg);
+  
 }
+.hamburger-menu.open:hover{
+   cursor: pointer;
+    content:  url(/Color=Blue@3x.svg);
+     
+   }
+  
+ 
+    
 .nav-mobile{
   
     width: 100%;

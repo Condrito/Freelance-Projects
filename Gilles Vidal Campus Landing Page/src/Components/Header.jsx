@@ -14,6 +14,11 @@ const Header = () => {
   // Determina si estás en la página de contacto
   const isTextWhite = window.location.pathname !== "/";
 
+  // Función para cerrar el menú cuando se hace clic en un enlace del desplegable
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <header className={`header ${isTextWhite ? "texto-white" : "texto-black"}`}>
       <div className="header-content">
@@ -65,7 +70,10 @@ const Header = () => {
           </Link>
           <div className="idiomas-content">
             <span
-              onClick={() => toggleLanguage("catalan")}
+              onClick={() => {
+                toggleLanguage("catalan");
+                closeMobileMenu(); // Cierra el menú al hacer clic en el idioma
+              }}
               className={`language-button link-button ${
                 language === "catalan" ? "active-idioma" : ""
               }`}
@@ -73,7 +81,10 @@ const Header = () => {
               CAT
             </span>
             <span
-              onClick={() => toggleLanguage("castellano")}
+              onClick={() => {
+                toggleLanguage("castellano");
+                closeMobileMenu(); // Cierra el menú al hacer clic en el idioma
+              }}
               className={`language-button link-button ${
                 language === "castellano" ? "active-idioma" : ""
               }`}
@@ -87,7 +98,7 @@ const Header = () => {
       <div className="nav-mobile">
         <img
           id="hamburguer-open"
-          className={`hamburger-menu ${isMobileMenuOpen ? "open" : ""}`}
+          className={`hamburger-menu ${isMobileMenuOpen ? "open" : "close"}`}
           onClick={toggleMobileMenu}
           src={
             !isMobileMenuOpen
@@ -106,6 +117,7 @@ const Header = () => {
               className={`link-button ${
                 isTextWhite ? "texto-white" : "texto-black"
               }`}
+              onClick={closeMobileMenu} // Cierra el menú al hacer clic en el enlace
             >
               {language === "catalan" ? "CAMPUS" : "CAMPUS"}
             </a>
@@ -116,6 +128,7 @@ const Header = () => {
               className={`link-button ${
                 isTextWhite ? "texto-white" : "texto-black"
               }`}
+              onClick={closeMobileMenu} // Cierra el menú al hacer clic en el enlace
             >
               {language === "catalan" ? "GILLES VIDAL" : "GILLES VIDAL"}
             </a>
@@ -126,6 +139,7 @@ const Header = () => {
               className={`link-button ${
                 isTextWhite ? "texto-white" : "texto-black"
               }`}
+              onClick={closeMobileMenu} // Cierra el menú al hacer clic en el enlace
             >
               {language === "catalan"
                 ? "EL NOSTRE ENFOCAMENT"
@@ -138,6 +152,7 @@ const Header = () => {
               className={`link-button ${
                 isTextWhite ? "texto-white" : "texto-black"
               }`}
+              onClick={closeMobileMenu} // Cierra el menú al hacer clic en el enlace
             >
               {language === "catalan" ? "CONTACTE" : "CONTACTO"}
             </Link>
@@ -145,7 +160,10 @@ const Header = () => {
           <div className="hamburger-menu-option-box">
             <div className="option-box-idiomas">
               <span
-                onClick={() => toggleLanguage("catalan")}
+                onClick={() => {
+                  toggleLanguage("catalan");
+                  closeMobileMenu(); // Cierra el menú al hacer clic en el idioma
+                }}
                 className={`language-button link-button ${
                   language === "catalan" ? "active-idioma" : ""
                 }`}
@@ -153,7 +171,10 @@ const Header = () => {
                 CAT
               </span>
               <span
-                onClick={() => toggleLanguage("castellano")}
+                onClick={() => {
+                  toggleLanguage("castellano");
+                  closeMobileMenu(); // Cierra el menú al hacer clic en el idioma
+                }}
                 className={`language-button link-button ${
                   language === "castellano" ? "active-idioma" : ""
                 }`}

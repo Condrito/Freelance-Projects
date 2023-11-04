@@ -6,7 +6,7 @@ const Inscribete_CAT = () => {
     <div className="inscribete-content">
       <div className="inscribete-overlay">
         <div className="inscribete-info-content">
-          <h2>NO T’HO PERDIS</h2>
+          <h2>NO T’HO PERDIS, T’ESPEREM AL CAMP!</h2>
           <Link to="/formulario-inscripcion">
             <button className="inscribete-btn">
               <p>INSCRIU-TE</p>

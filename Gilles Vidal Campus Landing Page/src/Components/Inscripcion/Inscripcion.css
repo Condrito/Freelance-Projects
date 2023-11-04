@@ -247,16 +247,19 @@ padding: 16px 32px;
 justify-content: center;
 align-items: center;
 gap: 10px;
-background: #187BD3;
+background: var(--neutro-900, #101010);
 }
 .form-inscripcion-btn>p{
-    color:  #101010;
+    color: var(--neutro-100, #FFF);
+
+/* Button L */
 font-family: Bebas Neue;
 font-size: 32px;
 font-style: normal;
 font-weight: 400;
 line-height: 38px; /* 118.75% */
 letter-spacing: 0.96px;
+text-transform: uppercase;
 }
 
 
@@ -321,15 +324,16 @@ input[type="radio"]:checked {
 
 
 .form-inscripcion-btn:hover{
-    background: var(--primary-900, #1363A9);
+    background: var(--neutro-800, #2E2E2E);
     cursor: pointer;
 }
 .form-inscripcion-btn::selection{
     border: 2px solid var(--neutro-900, #101010);
-    background: var(--primary-500, #187BD3);
+ 
 }
 .form-inscripcion-btn:disabled{
-    background: var(--neutro-200, #F3F2F2);
+    border: 2px solid var(--neutro-100, #FFF);
+    background: var(--neutro-900, #101010);
 }
 
 
@@ -355,7 +359,7 @@ input[type="radio"]:checked {
     .inscripcion-form-content{
        
     width: 80%;
-    
+   
     }
 
     
@@ -366,6 +370,7 @@ input[type="radio"]:checked {
   @media (max-width: 744px) {
     .inscripcion-hero-content{
         padding: 80px 40px;
+        
     }
     .inscripcion-hero-content>h1{
 
@@ -374,9 +379,10 @@ font-size: 48px;
 line-height: 58px; /* 120.833% */
     }
     .inscripcion-form-content{
-        padding-bottom: 170px;
-       position: relative;
+       
+    
         width: 75%;
+        align-items: center ;
         
         }
 
@@ -412,12 +418,23 @@ flex-direction: column;
         
         }
 
-        .form-inscripcion-btn{
-           position: absolute;
 
-           bottom:64px ;
-           left: calc(50% - 140px);;
+        .form-inscripcion-btn{
            
+        width: 200px;
+        
+        }
+        .form-inscripcion-btn>p{
+         
+
+            /* H4 */
+            font-family: Bebas Neue;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px; /* 116.667% */
+            letter-spacing: 0.72px;
+            text-transform: uppercase;
         }
     /* Estilos adicionales para dispositivos móviles */
   }

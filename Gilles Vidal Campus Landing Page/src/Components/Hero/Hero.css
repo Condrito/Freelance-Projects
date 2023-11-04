@@ -9,17 +9,19 @@
     display: flex;
 flex-direction: column;
 align-items: flex-start;
+gap: 16px;
 }
 
 .hero-title{
-    color: #FFF;
+    color: var(--neutro-100, #FFF);
 
-/* H1 */
+/* H1 XL */
 font-family: Bebas Neue;
 font-size: 96px;
-margin: 0;
-
+font-style: normal;
 font-weight: 400;
+line-height: 80px; /* 75% */
+margin: 0;
 
 }
 
@@ -95,7 +97,7 @@ letter-spacing: 0.96px;
     }
     .hero-photo{
    
-        background-image: url(/PhotoPortada.png);
+        background-image: url(/PhotoPortada@3x.png);
         background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el div */
         /* Otros estilos de fondo como repetición, posición, etc. */
         width: 100%;
@@ -123,7 +125,7 @@ letter-spacing: 0.96px;
     }
     .hero-photo{
    
-        background-image: url(/PhotoPortada.png);
+        background-image: url(/PhotoPortada@3x.png);
         background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el div */
         /* Otros estilos de fondo como repetición, posición, etc. */
         width: 100%;
@@ -135,24 +137,41 @@ letter-spacing: 0.96px;
       
       
     }
+
+    .hero-title{
+        color: var(--neutro-100, #FFF);
+
+/* H2 */
+font-family: Bebas Neue;
+font-size: 96px;
+font-style: normal;
+font-weight: 400;
+line-height: 80px; /* 120.833% */
+align-self: stretch;
+    
+    }
+    
+.title-content{
+  
+gap: 8px;
+}
 }
 
 
 /* Media query para dispositivos móviles */
 @media (max-width: 744px) {
     .hero-content{
-        margin-left: 50px;
-        margin-bottom: 100px;
+    width: calc(100% - 80px);
       
         display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 64px;
+    gap: 40px;
     }
 
     .hero-photo{
    
-        background-image: url(/PhotoPortada.png);
+        background-image: url(/PhotoPortada@3x.png);
         background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el div */
         /* Otros estilos de fondo como repetición, posición, etc. */
         width: 100%;
@@ -161,6 +180,7 @@ letter-spacing: 0.96px;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      padding: 0 40px 0 40px;
      
       
     }
@@ -168,15 +188,18 @@ letter-spacing: 0.96px;
     .hero-title{
         color: var(--neutro-100, #FFF);
 
-/* H2 */
-font-family: Bebas Neue;
-font-size: 48px;
-font-style: normal;
-font-weight: 400;
-line-height: 58px; /* 120.833% */
-align-self: stretch;
+        /* H2 */
+        font-family: Bebas Neue;
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 48px; /* 83.333% */
     
     }
+    .title-content{
+  
+        gap: 4px;
+        }
 
 
     h3{
@@ -185,7 +208,7 @@ align-self: stretch;
     /* H3 */
     color: var(--neutro-100, #FFF);
 font-family: Inter;
-font-size: 16px;
+font-size: 24px;
 font-style: normal;
 font-weight: 600;
 line-height: 24px; /* 150% */
@@ -194,22 +217,32 @@ line-height: 24px; /* 150% */
 
 
 
-    .hero-button{
-      scale: 0.7;
-      position: absolute;
-      left: -42px;
-      top: -10px;
-    }
+
     
     
     .hero-button>p{
       
-    font-size: 24px;
+        color: var(--neutro-900, #101010);
+
+        /* H4 */
+        font-family: Bebas Neue;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 116.667% */
+        letter-spacing: 0.72px;
+        text-transform: uppercase;
     
     }
 
     .hero-content a{
       
       position: relative;
+    }
+
+    .hero-button{
+    
+width: 200px;
+
     }
 }

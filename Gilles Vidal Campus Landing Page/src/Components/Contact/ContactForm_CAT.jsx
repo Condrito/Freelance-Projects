@@ -157,9 +157,7 @@ const ContactForm_CAT = () => {
 
       {isModalOpen && (
         <Modal setIsModalOpen={setIsModalOpen}>
-          <p className="send-text">
-            ¡El teu missatge s’ha enviat correctament!
-          </p>
+          <p className="send-text">El teu missatge s’ha enviat correctament!</p>
           <p className="send-text-secondary">
             Aviat ens posarem en contacte amb tu
           </p>

@@ -29,8 +29,10 @@ const Campus_ES = () => {
             src="/Calendar@3x.svg"
             alt="calendar icon"
           />
-          <p className="text-info-title">3 DÍAS</p>
-          <p className="text-info">27 al 29 de diciembre </p>
+          <div className="campus-info-box">
+            <p className="text-info-title">3 DÍAS</p>
+            <p className="text-info">27 al 29 de diciembre</p>
+          </div>
         </div>
         <div className="info-line first-line"></div>
         <div className="campus-info-horario">
@@ -39,8 +41,10 @@ const Campus_ES = () => {
             src="/Watch later@3x.svg"
             alt="watch icon"
           />
-          <p className="text-info-title">mañana</p>
-          <p className="text-info">De 9:00h a 13:00h</p>
+          <div className="campus-info-box">
+            <p className="text-info-title">mañana</p>
+            <p className="text-info">De 9:00h a 13:00h</p>
+          </div>
         </div>
         <div className="info-line  middle"></div>
         <div className="campus-info-localidad">
@@ -49,11 +53,13 @@ const Campus_ES = () => {
             src="/Location on@3x.svg"
             alt="location icon"
           />
-          <p className="text-info-title">barcelona</p>
-          <p className="text-info">
-            Colegio Sagrat Cor
-            <br /> C/ del Sagrat Cor, 25 (Sarrià)
-          </p>
+          <div className="campus-info-box">
+            <p className="text-info-title">barcelona</p>
+            <p className="text-info">
+              Colegio Sagrat Cor
+              <br /> C/ del Sagrat Cor, 25 (Sarrià)
+            </p>
+          </div>
         </div>
         <div className="info-line last-line"></div>
         <div className="campus-info-precio">
@@ -62,8 +68,10 @@ const Campus_ES = () => {
             src="/Payments@3x.svg"
             alt="money icon"
           />
-          <p className="text-info-title">95€</p>
-          <p className="text-info">50% descuento para hermanos</p>
+          <div className="campus-info-box">
+            <p className="text-info-title">95€</p>
+            <p className="text-info">50% descuento para hermanos</p>
+          </div>
         </div>
       </div>
 
