@@ -87,4 +87,10 @@ height: 32px;
 position: absolute;
 right: 24px;
 top: 24px;
+transition: 0.3s;
+}
+
+.modal-btn-close:hover{
+    cursor: pointer;
+    scale: 1.3;
 }

@@ -69,7 +69,7 @@ const ContactForm_ES = () => {
   };
 
   return (
-    <div>
+    <div className="form-box-box">
       <form
         className="contact-form-content"
         onSubmit={handleFormSubmit}

@@ -44,7 +44,26 @@ align-items: center;
 gap: 10px;
 background-color: #187BD3;
 }
-
+.hero-button:hover{
+    background: var(--primary-900, #1363A9);
+    cursor: pointer;
+}
+.hero-button::selection{
+    border: 2px solid var(--neutro-900, #101010);
+    background: var(--primary-500, #187BD3);
+}
+.hero-button:disabled{
+    background: var(--neutro-200, #F3F2F2);
+}
+.hero-button:disabled>p{
+    color: var(--neutro-300, #D2D2D2);
+font-family: Bebas Neue;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: 38px; /* 118.75% */
+letter-spacing: 0.96px;
+}
 
 .hero-button>p{
     color:#101010;

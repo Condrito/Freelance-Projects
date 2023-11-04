@@ -320,7 +320,17 @@ input[type="radio"]:checked {
 
 
 
-
+.form-inscripcion-btn:hover{
+    background: var(--primary-900, #1363A9);
+    cursor: pointer;
+}
+.form-inscripcion-btn::selection{
+    border: 2px solid var(--neutro-900, #101010);
+    background: var(--primary-500, #187BD3);
+}
+.form-inscripcion-btn:disabled{
+    background: var(--neutro-200, #F3F2F2);
+}
 
 
 

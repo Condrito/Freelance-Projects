@@ -48,9 +48,15 @@ gap: 24px;
 .logo-instgagram{
     width: 32px;
 height: 32px;
+background-image: url(/Instagram@3x.svg);
 }
 
+.logo-instgagram:hover{
 
+    background-image: url(/InstagramHover@3x.svg);
+ 
+  
+}
 
 
 

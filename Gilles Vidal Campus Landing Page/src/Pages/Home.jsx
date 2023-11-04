@@ -40,11 +40,6 @@ const Home = () => {
             <Campus_ES />
             <Gilles_Es />
             <div className="enfoque-planificacion-content">
-              <img
-                className="logo-gilles-bg"
-                src="/Vector@3x.svg"
-                alt="Logo Gilles"
-              />
               <Enfoque_ES />
               <Planificacion_ES />
             </div>

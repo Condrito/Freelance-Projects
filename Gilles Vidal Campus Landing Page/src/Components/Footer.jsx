@@ -29,11 +29,10 @@ const Footer = () => {
               </a>
             </div>
             <div className="footer-contact">
-              <img
+              <Link
+                to={"https://www.instagram.com/campus.gilles9/"}
                 className="logo-instgagram"
-                src="/Instagram@3x.svg"
-                alt="logo instagram"
-              />
+              ></Link>
               <Link to="/contact" className="footer-link">
                 contacte
               </Link>
@@ -53,11 +52,10 @@ const Footer = () => {
               </a>
             </div>
             <div className="footer-contact">
-              <img
+              <Link
+                to={"https://www.instagram.com/campus.gilles9/"}
                 className="logo-instgagram"
-                src="/Instagram@3x.svg"
-                alt="logo instagram"
-              />
+              ></Link>
               <Link to="/contact" className="footer-link">
                 contacto
               </Link>
