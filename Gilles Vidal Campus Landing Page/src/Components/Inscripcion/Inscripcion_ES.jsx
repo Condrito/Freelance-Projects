@@ -110,12 +110,12 @@ const Inscripcion_ES = () => {
         noValidate
       >
         <div className="form-block-box">
-          <label
-            className="inscripcion-form-label"
+          <div
+            className="inscripcion-form-div"
             htmlFor="DATOS DEL PADRE/MADRE/TUTOR"
           >
             <p>DATOS DEL PADRE/MADRE/TUTOR</p>
-          </label>
+          </div>
           <div className="inscipcion-inputs-box-group">
             <div className="inscipcion-inputs-box">
               <div className="input-box">
@@ -207,9 +207,9 @@ const Inscripcion_ES = () => {
           </div>
         </div>
         <div className="form-block-box">
-          <label className="inscripcion-form-label" htmlFor="DATOS DEL JUGADOR">
+          <div className="inscripcion-form-div" htmlFor="DATOS DEL JUGADOR">
             <p>DATOS DEL JUGADOR</p>
-          </label>
+          </div>
           <div className="inscipcion-inputs-box-group">
             <div className="inscipcion-inputs-box">
               <div className="input-box">
@@ -367,17 +367,17 @@ const Inscripcion_ES = () => {
         </div>
 
         <div className="form-block-box">
-          <label
-            className="inscripcion-form-label"
+          <div
+            className="inscripcion-form-div"
             htmlFor="ALERGIAS O INTOLERANCIAS"
           >
             <p>ALERGIAS O INTOLERANCIAS</p>
-          </label>
+          </div>
 
           <div className="auth-foto-content">
             <p>Autorizo a realizar fotografías*</p>
             <div className="radio-buttons">
-              <label className="radio-button-label">
+              <div className="radio-button-div">
                 <input
                   type="radio"
                   name="autorizaciónFoto"
@@ -392,8 +392,8 @@ const Inscripcion_ES = () => {
                   }
                 />
                 Sí
-              </label>
-              <label className="radio-button-label">
+              </div>
+              <div className="radio-button-div">
                 <input
                   className="radio-btn"
                   type="radio"
@@ -406,7 +406,7 @@ const Inscripcion_ES = () => {
                   }
                 />
                 No
-              </label>
+              </div>
             </div>
           </div>
           {validationErrors.authFoto && (

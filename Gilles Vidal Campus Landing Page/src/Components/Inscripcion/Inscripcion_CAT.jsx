@@ -97,7 +97,6 @@ const Inscripcion_CAT = () => {
       setValidationErrors(errors);
     }
   };
-
   return (
     <div className="inscripcion-content">
       <div className="inscripcion-hero-content">
@@ -110,12 +109,12 @@ const Inscripcion_CAT = () => {
         noValidate
       >
         <div className="form-block-box">
-          <label
-            className="inscripcion-form-label"
+          <div
+            className="inscripcion-form-div"
             htmlFor="DADES DEL PARE/MARE/TUTOR"
           >
             <p>DADES DEL PARE/MARE/TUTOR</p>
-          </label>
+          </div>
           <div className="inscipcion-inputs-box-group">
             <div className="inscipcion-inputs-box">
               <div className="input-box">
@@ -207,12 +206,9 @@ const Inscripcion_CAT = () => {
           </div>
         </div>
         <div className="form-block-box">
-          <label
-            className="inscripcion-form-label"
-            htmlFor="DADES DE LA JUGADORA"
-          >
+          <div className="inscripcion-form-div" htmlFor="DADES DE LA JUGADORA">
             <p>DADES DE LA JUGADORA</p>
-          </label>
+          </div>
           <div className="inscipcion-inputs-box-group">
             <div className="inscipcion-inputs-box">
               <div className="input-box">
@@ -361,17 +357,17 @@ const Inscripcion_CAT = () => {
         </div>
 
         <div className="form-block-box">
-          <label
-            className="inscripcion-form-label"
+          <div
+            className="inscripcion-form-div"
             htmlFor="AL·LÈRGIES O INTOLERÀNCIES"
           >
             <p>AL·LÈRGIES O INTOLERÀNCIES</p>
-          </label>
+          </div>
 
           <div className="auth-foto-content">
             <p>Autoritzo a realitzar fotografies*</p>
             <div className="radio-buttons">
-              <label className="radio-button-label">
+              <div className="radio-button-div">
                 <input
                   type="radio"
                   name="authFoto"
@@ -383,8 +379,8 @@ const Inscripcion_CAT = () => {
                   }
                 />
                 Sí
-              </label>
-              <label className="radio-button-label">
+              </div>
+              <div className="radio-button-div">
                 <input
                   className="radio-btn"
                   type="radio"
@@ -397,7 +393,7 @@ const Inscripcion_CAT = () => {
                   }
                 />
                 No
-              </label>
+              </div>
             </div>
           </div>
           {validationErrors.authFoto && (
