@@ -174,7 +174,7 @@ gap: 8px;
         background-image: url(/PhotoPortada@3x.png);
         background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el div */
         /* Otros estilos de fondo como repetición, posición, etc. */
-        width: 100%;
+        width: calc(100% - 80px);
       min-height: 100vh;
       background-position:  right;
       display: flex;
