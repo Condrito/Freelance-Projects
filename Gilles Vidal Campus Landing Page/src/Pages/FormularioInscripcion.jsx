@@ -4,8 +4,9 @@ import { useLanguage } from "../Context/LanguageContext";
 
 const FormularioInscripcion = () => {
   const { language } = useLanguage();
-  return <h1>hola esto es una prueba</h1>;
+  return (
+    <>{language === "catalan" ? <Inscripcion_CAT /> : <Inscripcion_ES />}</>
+  );
 };
 
 export default FormularioInscripcion;
-/*<>{language === "catalan" ? <Inscripcion_CAT /> : <Inscripcion_ES />}</>*/

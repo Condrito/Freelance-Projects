@@ -4,9 +4,7 @@ import Contact_ES from "../Components/Contact/Contact_ES";
 
 const Contact = () => {
   const { language } = useLanguage();
-  return <h1>hola esto es una prueba</h1>;
+  return <>{language === "catalan" ? <Contact_CAT /> : <Contact_ES />}</>;
 };
 
 export default Contact;
-
-/*<>{language === "catalan" ? <Contact_CAT /> : <Contact_ES />}</>;*/

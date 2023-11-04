@@ -34,9 +34,9 @@ const Footer = () => {
                 src="/Instagram@3x.svg"
                 alt="logo instagram"
               />
-              <a href="/contact" className="footer-link">
-                contacte{" "}
-              </a>
+              <Link to="/contact" className="footer-link">
+                contacte
+              </Link>
             </div>
           </>
         ) : (
@@ -58,7 +58,7 @@ const Footer = () => {
                 src="/Instagram@3x.svg"
                 alt="logo instagram"
               />
-              <Link href="/contact" className="footer-link">
+              <Link to="/contact" className="footer-link">
                 contacto
               </Link>
             </div>
