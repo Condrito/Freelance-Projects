@@ -29,10 +29,7 @@ const Footer = () => {
               </a>
             </div>
             <div className="footer-contact">
-              <Link
-                to={"https://www.instagram.com/campus.gilles9/"}
-                className="logo-instgagram"
-              ></Link>
+              <Link to={""} className="logo-instgagram"></Link>
               <Link to="/contact" className="footer-link">
                 contacte
               </Link>
@@ -52,10 +49,7 @@ const Footer = () => {
               </a>
             </div>
             <div className="footer-contact">
-              <Link
-                to={"https://www.instagram.com/campus.gilles9/"}
-                className="logo-instgagram"
-              ></Link>
+              <Link to={""} className="logo-instgagram"></Link>
               <Link to="/contact" className="footer-link">
                 contacto
               </Link>
@@ -68,3 +62,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+/*"https://www.instagram.com/campus.gilles9/*/
