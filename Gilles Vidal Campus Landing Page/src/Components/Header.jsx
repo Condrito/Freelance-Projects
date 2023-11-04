@@ -20,7 +20,11 @@ const Header = () => {
   };
 
   return (
-    <header className={`header ${isTextWhite ? "texto-white" : "texto-black"}`}>
+    <header
+      className={`header ${
+        isTextWhite ? "texto-white " : "texto-black header-overlay"
+      }`}
+    >
       <div className="header-content">
         <div className="logoLinks-content">
           <img className="logo" src="/iconoHeader.svg" alt="logo" />
