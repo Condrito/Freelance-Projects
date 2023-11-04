@@ -1,0 +1,386 @@
+.contact-content{
+  padding-top: 80px;
+    width: 100%;
+
+background: linear-gradient(141deg, #101010 37.82%, #187BD3 84.91%);
+display: flex;
+flex-direction: column;
+align-items: stretch;
+}
+
+
+.contact-hero-content{
+    
+ display: flex;
+
+
+ padding: 80px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 40px;
+flex-shrink: 0;
+}
+
+.contact-hero-content>h1{
+    color:#FFF;
+
+    /* H1 XL */
+    font-family: Bebas Neue;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90px; /* 75% */
+    margin: 0   ;
+}
+.contact-hero-content>p{
+   
+    color: #FFF;
+text-align: center;
+
+/* Body S */
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+
+}
+
+.contact-data-content{
+    display: flex;
+
+padding: 0px 80px;
+justify-content: center;
+align-items: center;
+gap: 80px;
+}
+
+.contact-data-box{
+    display: flex;
+flex-direction: column;
+align-items: center;
+gap: 24px;
+}
+.contact-data-box>img{
+    width: 32px;
+height: 32px;
+}
+
+.contact-data-box>p{
+    color: #FFF;
+text-align: center;
+
+/* Body S */
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}
+.contact-form-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 40px;
+    margin: 10%;
+    width: 80%;
+    color: var(--neutro-900, #101010);
+text-align: center;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+  }
+  
+  .form-inputs-content {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+    gap: 14px;
+    align-self: stretch;
+    flex-wrap: wrap;
+ 
+  }
+  
+  .contact-form-input {
+   width:calc(100% - 60px);
+    align-items: stretch;
+    gap: 10px;
+    border-radius: 4px;
+    border: 1px solid #D2D2D2;
+    background: #FFF;
+    display: flex;
+
+padding: 16px 40px 16px 16px;
+align-items: center;
+
+  }
+  
+  .form-inputs-box {
+   
+    display: flex;
+  flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    border-radius: 4px;
+   
+   
+  }
+  
+  input::placeholder,
+  textarea::placeholder {
+    color: #828282;
+    text-align: start;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  .contact-form-textarea {
+    display: flex;
+    height: 289px;
+padding: 16px 40px 16px 16px;/* Ajusta el espaciado entre campos aquí */
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    flex-wrap: wrap;
+    border-radius: 4px;
+    border: 1px solid #D2D2D2;
+    background: #FFF;
+  }
+  
+  .form-inputs-box-area {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap:10px
+  }
+  
+  .contact-btn {
+    display: flex;
+    width: 280px; /* Ajusta el ancho del botón según tus necesidades */
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: #101010;
+  }
+  
+  .contact-btn > p {
+    color: #FFF;
+    font-family: Bebas Neue;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38px; /* 118.75% */
+    letter-spacing: 0.96px;
+  }
+  
+
+.validator-message{
+    display: flex;
+    width:calc(100% - 60px);
+padding: 2px 8px;
+align-items: center;
+gap: 8px;
+border-radius: 4px;
+background: #F3F2F2;
+    color:  #E22323;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+  }
+  
+  .validator-message-area{
+    display: flex;
+width: 232px;
+padding: 2px 10px;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+border-radius: 4px;
+background: #F3F2F2;
+    color:  #E22323;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+  }
+
+
+  .validator-message-box{
+    border-radius: 4px;
+background:#F3F2F2;
+    display: flex;
+    width:calc(100% - 20px);
+padding: 2px 8px;
+align-items: center;
+gap: 8px;
+  }
+
+  
+  .validator-message-box-area{
+    border-radius: 4px;
+background:#F3F2F2;
+    display: flex;
+    width:calc(33% - 20px);
+padding: 2px 8px;
+align-items: center;
+gap: 8px;
+  }
+
+  .send-box{
+    padding-top: 15%;
+   
+display: flex;
+flex-direction: column;
+width: 100%;
+
+justify-items: center;
+align-content: center;
+
+
+
+
+  }
+
+  .send-text{
+   
+    color: #FFF;
+text-align: center;
+
+/* Body S */
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+/* Media query para tamaños de pantalla de escritorio */
+@media (min-width: 1024px) {
+  /* Estilos específicos para escritorio */
+
+  .contact-hero-content>p{
+    width: 60%;
+  }
+
+}
+
+/* Media query para tabletas */
+@media (min-width: 744px) and (max-width: 1024px) {
+  /* Estilos específicos para tabletas */
+  .contact-data-content{
+    display: flex;
+    width: calc(100% - 160px);
+    padding: 0  80px 80px 80px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}  
+
+.form-inputs-content {
+  width: calc(100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+  gap: 14px;
+  align-self: stretch;
+  flex-wrap: wrap;
+
+}
+
+.contact-form-content {
+ width: calc(100% - 160px);
+ display: flex;
+
+padding: 0px 80px 80px 80px;
+flex-direction: column;
+justify-content: center;
+align-items: flex-end;
+gap: 40px;
+margin: 0;
+}
+  
+}
+
+
+/* Media query para dispositivos móviles */
+@media (max-width: 744px) {
+
+  .contact-hero-content>h1{
+    font-size: 48px;
+line-height: 58px; 
+  }
+  .contact-hero-content{
+ 
+    padding: 80px 40px;
+
+gap: 24px; 
+  }
+
+  .contact-data-content{
+    display: flex;
+    width: calc(100% - 80px);
+    padding: 0px 40px 80px 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.form-inputs-content {
+  width: calc(100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+  gap: 14px;
+  align-self: stretch;
+  flex-wrap: wrap;
+
+}
+.contact-form-content {
+  width: calc(100% - 80px);
+  display: flex;
+ 
+ padding: 0px 40px 80px 40px;
+ flex-direction: column;
+ justify-content: center;
+ align-items: flex-end;
+ gap: 40px;
+ margin: 0;
+ }
+
+  /* Estilos adicionales para dispositivos móviles */
+}
+

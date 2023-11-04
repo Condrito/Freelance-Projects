@@ -1,0 +1,128 @@
+.planificacion-content{
+    display: flex;
+    width: 100%;
+    padding: 104px 0px 140px 0px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.planificacion-box-content{
+    display: flex;
+padding: 0px 80px;
+justify-content: center;
+align-items: center;
+align-content: center;
+gap: 88px;
+flex: 1 0 0;
+flex-wrap: wrap;
+}
+.planificacion-box-content h1{
+    color: #FFF;
+text-align: right;
+margin: 0;
+
+
+font-family: Bebas Neue;
+font-size: 96px;
+font-style: normal;
+font-weight: 400;
+line-height: 90px; 
+}
+
+.separador-horarios-content{
+    display: flex;
+justify-content: center;
+align-items: center;
+gap: 40px;
+}
+
+.separador{
+    width: 3px;
+height: 500.025px;
+background: #FFF;
+}
+
+.horarios-content{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+
+
+}
+
+.horario-content{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+color:#FFF;
+}
+
+.hora{
+    color:#FFF;
+    font-family: Bebas Neue;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38px; 
+    letter-spacing: 0.96px;
+    text-transform: uppercase;
+}
+.actividad{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+}
+
+
+
+
+
+/* Media query para tamaños de pantalla de escritorio */
+@media (min-width: 1024px) {
+    /* Estilos específicos para escritorio */
+
+
+
+}
+
+/* Media query para tabletas */
+@media (min-width: 744px) and (max-width: 1024px) {
+    /* Estilos específicos para tabletas */
+    .planificacion-box-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+   
+  
+   
+    }
+    
+}
+
+
+/* Media query para dispositivos móviles */
+@media (max-width: 744px) {
+.planificacion-box-content h1{
+    color: var(--neutro-100, #FFF);
+text-align: right;
+
+/* H2 */
+font-family: Bebas Neue;
+font-size: 48px;
+font-style: normal;
+font-weight: 400;
+line-height: 58px; /* 120.833% */
+}
+    
+    /* Estilos adicionales para dispositivos móviles */
+}
+
+
+

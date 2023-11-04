@@ -1,0 +1,196 @@
+/*---------------------------------------------------------------------------------------------------------------
+---------------------------------------------- HERO -------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+.title-content{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+
+.hero-title{
+    color: #FFF;
+
+/* H1 */
+font-family: Bebas Neue;
+font-size: 96px;
+margin: 0;
+
+font-weight: 400;
+
+}
+
+h3{
+    color: #FFF;
+
+/* H3 */
+font-family: 'Inter', sans-serif;
+font-size: 40px;
+font-style: normal;
+font-weight: 600;
+line-height: 48px; /* 120% */
+text-transform: uppercase;
+}
+
+.hero-button{
+    display: flex;
+width: 280px;
+padding: 16px 32px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+background-color: #187BD3;
+}
+
+
+.hero-button>p{
+    color:#101010;
+font-family: Bebas Neue;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: 38px; /* 118.75% */
+letter-spacing: 0.96px;
+}
+
+
+
+
+
+/* Media query para tamaños de pantalla de escritorio */
+@media (min-width: 1024px) {
+    /* Estilos específicos para escritorio */
+
+ 
+    .hero-content{
+        margin-left: 180px;
+        margin-top: 80px;
+      
+        display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 64px;
+    }
+    .hero-photo{
+   
+        background-image: url(/PhotoPortada.png);
+        background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el div */
+        /* Otros estilos de fondo como repetición, posición, etc. */
+        width: 100%;
+      min-height: 100vh;
+      background-position: bottom right;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+    }
+}
+
+/* Media query para tabletas */
+@media (min-width: 744px) and (max-width: 1024px) {
+    /* Estilos específicos para tabletas */
+ 
+    .hero-content{
+        margin-left: 80px;
+        margin-top: 80px;
+      
+        display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 64px;
+    }
+    .hero-photo{
+   
+        background-image: url(/PhotoPortada.png);
+        background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el div */
+        /* Otros estilos de fondo como repetición, posición, etc. */
+        width: 100%;
+      min-height: 100vh;
+      background-position: bottom right;
+      display: flex;
+      flex-direction: column;
+     justify-content: center;
+      
+      
+    }
+}
+
+
+/* Media query para dispositivos móviles */
+@media (max-width: 744px) {
+    .hero-content{
+        margin-left: 50px;
+        margin-bottom: 100px;
+      
+        display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 64px;
+    }
+
+    .hero-photo{
+   
+        background-image: url(/PhotoPortada.png);
+        background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el div */
+        /* Otros estilos de fondo como repetición, posición, etc. */
+        width: 100%;
+      min-height: 100vh;
+      background-position:  right;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+     
+      
+    }
+
+    .hero-title{
+        color: var(--neutro-100, #FFF);
+
+/* H2 */
+font-family: Bebas Neue;
+font-size: 48px;
+font-style: normal;
+font-weight: 400;
+line-height: 58px; /* 120.833% */
+align-self: stretch;
+    
+    }
+
+
+    h3{
+       
+        align-self: stretch; 
+    /* H3 */
+    color: var(--neutro-100, #FFF);
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 150% */
+    }
+    /* Estilos adicionales para dispositivos móviles */
+
+
+
+    .hero-button{
+      scale: 0.7;
+      position: absolute;
+      left: -42px;
+      top: -10px;
+    }
+    
+    
+    .hero-button>p{
+      
+    font-size: 24px;
+    
+    }
+
+    .hero-content a{
+      
+      position: relative;
+    }
+}

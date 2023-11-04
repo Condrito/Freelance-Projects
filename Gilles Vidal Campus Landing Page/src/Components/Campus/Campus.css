@@ -1,0 +1,319 @@
+/*---------------------------------------------------------------------------------------------------------------
+---------------------------------------------- CAMPUS -------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------*/
+
+
+
+.campus-background{
+    display: flex;
+width: 100%;
+
+padding: 104px 0px 140px 0px;
+flex-direction: column;
+align-items: center;
+gap: 80px;
+background: linear-gradient(132deg, #101010 40.96%, #187BD3 83.66%);
+
+}
+
+
+.campus-descripcion{
+    display: flex;
+padding: 0px 20%;
+flex-direction: column;
+align-items: center;
+gap: 32px;
+align-self: stretch;
+}
+.campus-descripcion>h2{
+    color: #FFF;
+text-align: center;
+
+/* H2 */
+font-family: Bebas Neue;
+font-size: 48px;
+font-style: normal;
+font-weight: 400;
+line-height: 58px; /* 120.833% */
+}
+.campus-descripcion>p{
+    color: #FFF;
+text-align: center;
+align-self: stretch;
+
+/* Body */
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}
+.campus-descripcion>p>span{
+    color: #187BD3;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.campus-info-calendario{
+display: flex;
+width: 199px;
+height: 158px;
+flex-direction: column;
+align-items: center;
+gap: 24px;
+flex-shrink: 0;
+justify-content: center;
+}
+
+
+.campus-info-horario{
+    display: flex;
+    width: 199px;
+    height: 158px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    flex-shrink: 0;
+    justify-content: center;
+}
+.campus-info-localidad{
+    display: flex;
+    width: 199px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    flex-shrink: 0;
+    justify-content: center;
+}
+              
+.campus-info-precio{
+    display: flex;
+    width: 199px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    flex-shrink: 0;
+    justify-content: center;
+}
+
+
+
+.info-line{
+    width: 1px;
+    height: 155px;
+    background: #AAA;
+}
+
+.campus-incluido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+.campus-incluido>h2{
+    color: #FFF;
+text-align: center;
+font-family: Bebas Neue;
+font-size: 48px;
+font-style: normal;
+font-weight: 400;
+line-height: 58px;
+}
+
+.incluido-box-content{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 16px;
+}
+.box-content{
+    display: flex;
+align-items: center;
+gap: 16px;
+}
+.box-content>p{
+    color: #FFF;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+text-transform: uppercase;
+}
+
+.check-icon{
+    width: 32px;
+height: 32px;
+}
+.campus-icon{
+    width: 40px;
+height: 40px;
+flex-shrink: 0;
+}
+
+.text-info-title{
+    color: #FFF;
+text-align: center;
+font-family: Bebas Neue;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: 38px;
+letter-spacing: 0.96px;
+text-transform: uppercase;
+
+}
+.text-info{
+    color: #FFF;
+text-align: center;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* Media query para tamaños de pantalla de escritorio */
+@media (min-width: 1024px) {
+    /* Estilos específicos para escritorio */
+    .campus-info{
+        display: flex;
+width: 1128px;
+padding: 24px;
+justify-content: center;
+align-items: flex-start;
+align-content: flex-start;
+gap: 40px;
+flex-wrap: wrap;
+}
+ 
+
+
+.campus-incluido-content{
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    justify-content: center;
+    align-items: center;
+column-gap: 64px;
+row-gap:16px ;
+}
+}
+
+/* Media query para tabletas */
+@media (min-width: 744px) and (max-width: 1024px) {
+    /* Estilos específicos para tabletas */
+    .campus-descripcion{
+        display: flex;
+    padding: 0px 10%;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    align-self: stretch;
+    }
+    .middle{
+        display: none;
+    }
+    .campus-info{
+       
+       
+
+        display: grid;
+        grid-template-areas:
+          "campus-info-calendario first-line campus-info-horario"
+          "campus-info-localidad last-line campus-info-precio";
+        grid-template-columns: 1fr 1px 1fr;
+        grid-template-rows: 1fr;
+        justify-content: center;
+        align-items: center;
+     
+padding: 24px;
+
+gap: 60px;
+
+}
+
+.campus-incluido-content{
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr  1fr;
+    justify-content: center;
+    align-items: center;
+column-gap: 64px;
+row-gap:16px ;
+}
+}
+
+
+
+
+/* Media query para dispositivos móviles */
+@media (max-width: 744px) {
+    .campus-descripcion{
+        display: flex;
+    padding: 0px 5%;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    align-self: stretch;
+    }
+    .campus-descripcion>h2{
+   
+    font-size: 32px;
+    line-height:38px;
+    letter-spacing: 0.96px;
+    text-transform: uppercase;
+    }
+
+    
+    .campus-background{
+      
+    
+    padding: 80px 0px 80px 0px;
+   
+    
+    }
+    .campus-info{
+                display: flex;
+                flex-direction: column;
+width: calc(100% - 48px);
+padding: 24px;
+justify-content: center;
+align-items: center;
+gap: 40px;
+flex-wrap: nowrap;
+}
+
+.info-line{
+    display: none;
+}
+
+.campus-incluido-content{
+   
+    display: grid;
+    grid-template-columns: 1fr;
+    
+    justify-content: center;
+    align-items: center;
+column-gap: 64px;
+row-gap:16px ;
+}
+}
+
+
+

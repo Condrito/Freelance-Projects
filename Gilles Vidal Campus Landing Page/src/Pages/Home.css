@@ -1,0 +1,122 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+
+
+.home-page{
+  position: relative;
+
+
+  background-image: url(/Vector@3x.svg);
+  background-position: center calc(100% - 40px);
+ 
+  
+  background-repeat: no-repeat;
+}
+
+  .enfoque-planificacion-content{
+   position: relative;
+    width: 100%;
+   
+    background: #101010;
+    z-index: -2;
+    
+  }
+  .enfoque-planificacion-content::after{
+    
+    content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(circle at 97% 3%,  rgba(24, 123, 211, 0.70) 4%, rgba(24, 123, 211, 0.15) 20%, transparent 37%);
+  right: 0;
+  z-index: -1;
+}
+
+.enfoque-planificacion-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(circle at 2% 50%, rgba(24, 123, 211, 0.70) 4%, rgba(24, 123, 211, 0.25) 20%, transparent 37%);
+  left: 0;
+  z-index: -1;
+ 
+}
+
+.logo-gilles-bg{
+  position: absolute;
+  bottom: -165px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 890px;
+  z-index: -1; 
+  scale: 1;
+
+flex-shrink: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* Media query para tamaños de pantalla de escritorio */
+@media (min-width: 1024px) {
+  /* Estilos específicos para escritorio */
+ 
+  
+}
+
+/* Media query para tabletas */
+@media (min-width: 744px) and (max-width: 1024px) {
+
+  .home-page{
+    position: relative;
+  
+  
+    background-image: url(/Vector@3x.svg);
+    background-position: center calc(100% - 280px);
+   
+    
+    background-repeat: no-repeat;
+  }
+  .enfoque-planificacion-content::after{
+    
+
+  background: radial-gradient(circle at 70% 20%,  rgba(24, 123, 211, 0.70) 4%, rgba(24, 123, 211, 0.15) 20%, transparent 37%);
+
+}
+
+
+
+.enfoque-planificacion-content::before {
+ 
+  background: radial-gradient(circle at 30% 60%, rgba(24, 123, 211, 0.70) 4%, rgba(24, 123, 211, 0.25) 20%, transparent 37%);
+ 
+ 
+}
+}
+
+
+/* Media query para dispositivos móviles */
+@media (max-width: 744px) {
+  .home-page{
+    position: relative;
+  
+  
+    background-image: url(/Vector@3x.svg);
+    background-position: center calc(100% - 200px);
+   
+    
+    background-repeat: no-repeat;
+  }
+ 
+}
+
+

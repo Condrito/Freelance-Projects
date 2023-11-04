@@ -1,0 +1,20 @@
+
+
+
+
+
+
+main{
+    width: 100%;
+    min-height: 100vh;
+   
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  a {
+    text-decoration: none;
+    /* Otros estilos para los enlaces, como color y hover, si es necesario */
+  }
