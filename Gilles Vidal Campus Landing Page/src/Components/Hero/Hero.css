@@ -97,7 +97,7 @@ letter-spacing: 0.96px;
     }
     .hero-photo{
    
-        background-image: url(/PhotoPortada@3x.png);
+        background-image: url(/PhotoPortada@3x.svg);
         background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el div */
         /* Otros estilos de fondo como repetición, posición, etc. */
         width: 100%;
@@ -125,7 +125,7 @@ letter-spacing: 0.96px;
     }
     .hero-photo{
    
-        background-image: url(/PhotoPortada@3x.png);
+        background-image: url(/PhotoPortada@3x.svg);
         background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el div */
         /* Otros estilos de fondo como repetición, posición, etc. */
         width: 100%;
@@ -171,12 +171,12 @@ gap: 8px;
 
     .hero-photo{
    
-        background-image: url(/PhotoPortada@3x.png);
+        background-image: url(/PhotoPortada@3x.svg);
         background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el div */
         /* Otros estilos de fondo como repetición, posición, etc. */
         width: calc(100% - 80px);
       min-height: 100vh;
-      background-position:  right;
+      background-position:  85%;
       display: flex;
       flex-direction: column;
       justify-content: center;
