@@ -27,7 +27,9 @@ const Header = () => {
     >
       <div className="header-content">
         <div className="logoLinks-content">
-          <img className="logo" src="/iconoHeader.svg" alt="logo" />
+          <Link to="/">
+            <img className="logo" src="/iconoHeader.svg" alt="logo" />
+          </Link>
           <div
             className={`links-content nav-desktop ${
               isTextWhite ? "texto-white" : "texto-black"

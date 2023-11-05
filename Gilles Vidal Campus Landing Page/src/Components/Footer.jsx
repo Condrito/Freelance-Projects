@@ -7,11 +7,14 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-logo-content">
-        <img
-          className="footer-logo"
-          src="/Logo@3x.svg"
-          alt="Logo Gilles Vidal"
-        />
+        <a href="/#hero">
+          <img
+            className="footer-logo"
+            src="/Logo@3x.svg"
+            alt="Logo Gilles Vidal"
+          />
+        </a>
+
         <p className="footer-copy-right">© Copyright 2023 - Gilles Vidal</p>
       </div>
       <div className="footer-content">
