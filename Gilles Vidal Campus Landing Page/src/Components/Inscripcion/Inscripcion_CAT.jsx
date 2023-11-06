@@ -431,7 +431,8 @@ const Inscripcion_CAT = () => {
         <Modal setIsModalOpen={setIsModalOpen}>
           <p className="send-text">el formulari s’ha enviat correctament</p>
           <p className="send-text-secondary">
-            gràcies per confiar, t’esperem al camp!
+            Rebràs un mail al teu correu personal per finalitzar la inscripció,
+            t’esperem al camp!
           </p>
         </Modal>
       )}

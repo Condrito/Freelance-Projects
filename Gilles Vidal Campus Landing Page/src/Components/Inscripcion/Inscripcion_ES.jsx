@@ -444,7 +444,8 @@ const Inscripcion_ES = () => {
         <Modal setIsModalOpen={setIsModalOpen}>
           <p className="send-text">El formulario se ha enviado correctamente</p>
           <p className="send-text-secondary">
-            Gracias por confiar, ¡te esperamos en el campo!
+            Recibirás un mail a tu correo personal para finalizar la
+            inscripción, ¡te esperamos en el campo!
           </p>
         </Modal>
       )}
