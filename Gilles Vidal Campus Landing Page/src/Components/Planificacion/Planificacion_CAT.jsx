@@ -20,11 +20,11 @@ const Planificacion_CAT = () => {
               </div>
               <div className="horario-content">
                 <p className="hora">09:45 h</p>
-                <p className="actividad">Descans i esmorzar</p>
+                <p className="actividad">Sessió d’entrenament</p>
               </div>
               <div className="horario-content">
                 <p className="hora">11:15 h</p>
-                <p className="actividad">Control d’assistència</p>
+                <p className="actividad">Descans i esmorzar</p>
               </div>
               <div className="horario-content">
                 <p className="hora">11:45 h</p>
