@@ -4,17 +4,17 @@ import { useEffect, useState } from "react";
 import Modal from "../Modal/Modal";
 
 const initialState = {
-  nombre: "",
-  apellidos: "",
+  name: "",
+  surname: "",
   email: "",
-  teléfono: "",
-  nombreJugador: "",
-  apellidosJugador: "",
-  fechaNacimiento: "",
-  teléfonoJugador: "",
+  phone: "",
+  playerName: "",
+  playerSurname: "",
+  birthdayDate: "",
+  playerPhone: "",
   talla: "",
-  clubJugador: "",
-  autorizaciónFoto: "",
+  playerClub: "",
+  authFoto: "",
   alergias: "",
 };
 
@@ -57,37 +57,37 @@ const Inscripcion_ES = () => {
     // Realiza las validaciones del formulario
     const errors = {};
 
-    if (!formData.nombre) {
-      errors.nombre = "*Este campo es obligatorio";
+    if (!formData.name) {
+      errors.name = "*Este campo es obligatorio";
     }
-    if (!formData.apellidos) {
-      errors.apellidos = "*Este campo es obligatorio";
+    if (!formData.surname) {
+      errors.surname = "*Este campo es obligatorio";
     }
     if (!formData.email.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i)) {
       errors.email = "*El formato no es correcto";
     }
-    if (!formData.teléfono.match(/^[0-9]{9}$/)) {
-      errors.teléfono = "*El formato no es correcto";
+    if (!formData.phone.match(/^[0-9]{9}$/)) {
+      errors.phone = "*El formato no es correcto";
     }
-    if (!formData.nombreJugador) {
-      errors.nombreJugador = "*Este campo es obligatorio";
+    if (!formData.playerName) {
+      errors.playerName = "*Este campo es obligatorio";
     }
-    if (!formData.apellidosJugador) {
-      errors.apellidosJugador = "*Este campo es obligatorio";
+    if (!formData.playerSurname) {
+      errors.playerSurname = "*Este campo es obligatorio";
     }
-    if (!formData.fechaNacimiento) {
-      errors.fechaNacimiento = "*Este campo es obligatorio";
-    } else if (!isValidDate(formData.fechaNacimiento)) {
-      errors.fechaNacimiento = "*Formato de fecha no válido (dd/mm/aaaa)";
+    if (!formData.birthdayDate) {
+      errors.birthdayDate = "*Este campo es obligatorio";
+    } else if (!isValidDate(formData.birthdayDate)) {
+      errors.birthdayDate = "*Formato de fecha no válido (dd/mm/aaaa)";
     }
-    if (!formData.clubJugador) {
-      errors.clubJugador = "*Este campo es obligatorio";
+    if (!formData.playerClub) {
+      errors.playerClub = "*Este campo es obligatorio";
     }
     if (!formData.talla) {
       errors.talla = "*Este campo es obligatorio";
     }
-    if (!formData.autorizaciónFoto) {
-      errors.autorizaciónFoto = "*Este campo es obligatorio";
+    if (!formData.authFoto) {
+      errors.authFoto = "*Este campo es obligatorio";
     }
 
     if (Object.keys(errors).length === 0) {
@@ -97,7 +97,6 @@ const Inscripcion_ES = () => {
       setValidationErrors(errors);
     }
   };
-
   return (
     <div className="inscripcion-content">
       <div className="inscripcion-hero-content">
@@ -122,18 +121,18 @@ const Inscripcion_ES = () => {
                 <input
                   className="inscripcion-form-input"
                   type="text"
-                  name="nombre"
+                  name="name"
                   placeholder="Nombre*"
                   required
-                  value={formData.nombre}
+                  value={formData.name}
                   onChange={(e) =>
-                    setFormData({ ...formData, nombre: e.target.value })
+                    setFormData({ ...formData, name: e.target.value })
                   }
                 />
-                {validationErrors.nombre && (
+                {validationErrors.name && (
                   <div className="I-validator-message-box">
                     <p className="I-validator-message">
-                      {validationErrors.nombre}
+                      {validationErrors.name}
                     </p>
                   </div>
                 )}
@@ -143,18 +142,18 @@ const Inscripcion_ES = () => {
                 <input
                   className="inscripcion-form-input"
                   type="text"
-                  name="apellidos"
+                  name="surname"
                   placeholder="Apellidos*"
                   required
-                  value={formData.apellidos}
+                  value={formData.surname}
                   onChange={(e) =>
-                    setFormData({ ...formData, apellidos: e.target.value })
+                    setFormData({ ...formData, surname: e.target.value })
                   }
                 />
-                {validationErrors.apellidos && (
+                {validationErrors.surname && (
                   <div className="I-validator-message-box">
                     <p className="I-validator-message">
-                      {validationErrors.apellidos}
+                      {validationErrors.surname}
                     </p>
                   </div>
                 )}
@@ -186,19 +185,19 @@ const Inscripcion_ES = () => {
                 <input
                   className="inscripcion-form-input"
                   type="tel"
-                  name="teléfono"
+                  name="phone"
                   placeholder="Teléfono*"
                   required
                   pattern="^[0-9]{9}$"
-                  value={formData.teléfono}
+                  value={formData.phone}
                   onChange={(e) =>
-                    setFormData({ ...formData, teléfono: e.target.value })
+                    setFormData({ ...formData, phone: e.target.value })
                   }
                 />
-                {validationErrors.teléfono && (
+                {validationErrors.phone && (
                   <div className="I-validator-message-box">
                     <p className="I-validator-message">
-                      {validationErrors.teléfono}
+                      {validationErrors.phone}
                     </p>
                   </div>
                 )}
@@ -207,8 +206,8 @@ const Inscripcion_ES = () => {
           </div>
         </div>
         <div className="form-block-box">
-          <div className="inscripcion-form-div" htmlFor="DATOS DEL JUGADOR">
-            <p>DATOS DEL JUGADOR</p>
+          <div className="inscripcion-form-div" htmlFor="DADES DE LA JUGADORA">
+            <p>DATOS DEL JUGADOR/A</p>
           </div>
           <div className="inscipcion-inputs-box-group">
             <div className="inscipcion-inputs-box">
@@ -216,18 +215,18 @@ const Inscripcion_ES = () => {
                 <input
                   className="inscripcion-form-input"
                   type="text"
-                  name="nombreJugador"
+                  name="playerName"
                   placeholder="Nombre*"
                   required
-                  value={formData.nombreJugador}
+                  value={formData.playerName}
                   onChange={(e) =>
-                    setFormData({ ...formData, nombreJugador: e.target.value })
+                    setFormData({ ...formData, playerName: e.target.value })
                   }
                 />
-                {validationErrors.nombreJugador && (
+                {validationErrors.playerName && (
                   <div className="I-validator-message-box">
                     <p className="I-validator-message">
-                      {validationErrors.nombreJugador}
+                      {validationErrors.playerName}
                     </p>
                   </div>
                 )}
@@ -237,21 +236,18 @@ const Inscripcion_ES = () => {
                 <input
                   className="inscripcion-form-input"
                   type="text"
-                  name="apellidosJugador"
+                  name="playerSurname"
                   placeholder="Apellidos*"
                   required
-                  value={formData.apellidosJugador}
+                  value={formData.playerSurname}
                   onChange={(e) =>
-                    setFormData({
-                      ...formData,
-                      apellidosJugador: e.target.value,
-                    })
+                    setFormData({ ...formData, playerSurname: e.target.value })
                   }
                 />
-                {validationErrors.apellidosJugador && (
+                {validationErrors.playerSurname && (
                   <div className="I-validator-message-box">
                     <p className="I-validator-message">
-                      {validationErrors.apellidosJugador}
+                      {validationErrors.playerSurname}
                     </p>
                   </div>
                 )}
@@ -262,21 +258,18 @@ const Inscripcion_ES = () => {
                 <input
                   className="inscripcion-form-input"
                   type="text"
-                  name="fechaNacimiento"
+                  name="birthdayDate"
                   placeholder="Fecha de nacimiento (dd/mm/aaaa)*"
                   required
-                  value={formData.fechaNacimiento}
+                  value={formData.birthdayDate}
                   onChange={(e) =>
-                    setFormData({
-                      ...formData,
-                      fechaNacimiento: e.target.value,
-                    })
+                    setFormData({ ...formData, birthdayDate: e.target.value })
                   }
                 />
-                {validationErrors.fechaNacimiento && (
+                {validationErrors.birthdayDate && (
                   <div className="I-validator-message-box">
                     <p className="I-validator-message">
-                      {validationErrors.fechaNacimiento}
+                      {validationErrors.birthdayDate}
                     </p>
                   </div>
                 )}
@@ -286,16 +279,13 @@ const Inscripcion_ES = () => {
                 <input
                   className="inscripcion-form-input"
                   type="tel"
-                  name="teléfonoJugador"
+                  name="playerPhone"
                   placeholder="Teléfono"
                   required
                   pattern="^[0-9]{9}$"
-                  value={formData.teléfonoJugador}
+                  value={formData.playerPhone}
                   onChange={(e) =>
-                    setFormData({
-                      ...formData,
-                      teléfonoJugador: e.target.value,
-                    })
+                    setFormData({ ...formData, playerPhone: e.target.value })
                   }
                 />
               </div>
@@ -346,18 +336,18 @@ const Inscripcion_ES = () => {
                 <input
                   className="inscripcion-form-input"
                   type="text"
-                  name="clubJugador"
+                  name="playerClub"
                   placeholder="Club de fútbol donde juegas*"
                   required
-                  value={formData.clubJugador}
+                  value={formData.playerClub}
                   onChange={(e) =>
-                    setFormData({ ...formData, clubJugador: e.target.value })
+                    setFormData({ ...formData, playerClub: e.target.value })
                   }
                 />
-                {validationErrors.clubJugador && (
+                {validationErrors.playerClub && (
                   <div className="I-validator-message-box">
                     <p className="I-validator-message">
-                      {validationErrors.clubJugador}
+                      {validationErrors.playerClub}
                     </p>
                   </div>
                 )}
@@ -369,7 +359,7 @@ const Inscripcion_ES = () => {
         <div className="form-block-box">
           <div
             className="inscripcion-form-div"
-            htmlFor="ALERGIAS O INTOLERANCIAS"
+            htmlFor="ALERGIES O INTOLERANCIAS"
           >
             <p>ALERGIAS O INTOLERANCIAS</p>
           </div>
@@ -380,15 +370,12 @@ const Inscripcion_ES = () => {
               <div className="radio-button-div">
                 <input
                   type="radio"
-                  name="autorizaciónFoto"
-                  value="Sí"
+                  name="authFoto"
+                  value="Si"
                   required
-                  checked={formData.autorizaciónFoto === "Sí"}
+                  checked={formData.authFoto === "Si"}
                   onChange={(e) =>
-                    setFormData({
-                      ...formData,
-                      autorizaciónFoto: e.target.value,
-                    })
+                    setFormData({ ...formData, authFoto: e.target.value })
                   }
                 />
                 Sí
@@ -417,7 +404,7 @@ const Inscripcion_ES = () => {
 
           <div className="alergias-content">
             <p className="alergias-text">
-              ¿El jugador/a tiene alguna alergia o intolerancia?
+              El jugador/a tiene alguna alergia o intoleráncia?
             </p>
 
             <textarea
@@ -442,10 +429,10 @@ const Inscripcion_ES = () => {
       </form>
       {isModalOpen && (
         <Modal setIsModalOpen={setIsModalOpen}>
-          <p className="send-text">El formulario se ha enviado correctamente</p>
+          <p className="send-text">el formulario se ha enviado correctamente</p>
           <p className="send-text-secondary">
-            Próximamente recibirás un mail a tu correo personal para finalizar
-            la inscripción, ¡te esperamos en el campo!
+            Próximamente recibiras un mail a tu correo personal para finalizar
+            la inscripción, ¡te esperemos en el campo!
           </p>
         </Modal>
       )}
