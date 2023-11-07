@@ -207,7 +207,7 @@ const Inscripcion_CAT = () => {
         </div>
         <div className="form-block-box">
           <div className="inscripcion-form-div" htmlFor="DADES DE LA JUGADORA">
-            <p>DADES DE LA JUGADORA</p>
+            <p>DADES DEL JUGADOR/A</p>
           </div>
           <div className="inscipcion-inputs-box-group">
             <div className="inscipcion-inputs-box">
