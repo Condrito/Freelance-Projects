@@ -404,7 +404,7 @@ const Inscripcion_ES = () => {
 
           <div className="alergias-content">
             <p className="alergias-text">
-              El jugador/a tiene alguna alergia o intoleráncia?
+              El jugador/a tiene alguna alergia o intolerancia?
             </p>
 
             <textarea
