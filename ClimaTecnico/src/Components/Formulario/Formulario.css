@@ -18,8 +18,8 @@
   }
   .formulario-background {
     background-image: url(/Cliente@3x.png);
-    background-size: cover;
-    background-position: center center; /* Centra la imagen en el eje X e Y */
+    background-size:cover;
+    background-position: center bottom ; /* Centra la imagen en el eje X e Y */
    position: absolute;
   
     width: calc(100% - 0px);
@@ -228,9 +228,8 @@ flex: 1 0 0;
   .formulario-background {
     background-image: url(/Cliente@3x.png);
     background-size: cover;
-    background-position: center center; /* Centra la imagen en el eje X e Y */
+    background-position: top center; /* Centra la imagen en el eje X e Y */
    position: absolute;
-  
     width: calc(100% - 0px);
     height:900px;
     top: 0px;
@@ -440,8 +439,8 @@ flex: 1 0 0;
   }
   .formulario-background {
     background-image: url(/Cliente@3x.png);
-    background-size: cover;
-    background-position: center center; /* Centra la imagen en el eje X e Y */
+    background-size:cover;
+    background-position: top center; /* Centra la imagen en el eje X e Y */
    position: absolute;
   
     width: calc(100% - 0px);
