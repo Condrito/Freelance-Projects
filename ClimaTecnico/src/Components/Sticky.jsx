@@ -27,7 +27,7 @@ const Sticky = () => {
           </div>
           <div className="telefono-content">
             <img className="telefono-icon" src="Phone@3x.svg" alt="telf-icon" />
-            <p className="telefono">635 258 247</p>
+            <p className="telefono">+34 611 712 312</p>
           </div>
         </div>
       </div>

@@ -1,6 +1,19 @@
 
+  select{
+ 
+   
+      border-right: 16px solid var(--Neutral-100, #FFF);
+      
+     
+    
+    color: var(--Neutral-700, #828282);  
+  }
   
 
+  
+ 
+
+  
 /* Media query para desktop */
 
 @media (min-width: 1024px) {
@@ -125,16 +138,24 @@ background: var(--Neutral-100, #FFF);
   }
 
   .formulario-input-select{
+   
+    
     display: flex;
-width: 100%;
-padding: 8px 16px;
+width: calc(50% - 32);
+padding: 8px 16px 8px 16px;
+
+
 align-items: center;
 gap: 10px;
 border-radius: 8px;
-border: 1px solid var(--Neutral-400, #D2D2D2);
-background: var(--Neutral-100, #FFF);
+
+
 margin-bottom: 16px;
   }
+
+  
+ 
+
 
   .placeholder-dropdown{
     color: var(--Neutral-700, #828282);
@@ -342,6 +363,7 @@ border-radius: 8px;
 border: 1px solid var(--Neutral-400, #D2D2D2);
 background: var(--Neutral-100, #FFF);
 margin-bottom: 16px;
+border-right: 16px solid var(--Neutral-100, #FFF);
   }
 
   .placeholder-dropdown{
@@ -569,6 +591,7 @@ border-radius: 8px;
 border: 1px solid var(--Neutral-400, #D2D2D2);
 background: var(--Neutral-100, #FFF);
 margin-bottom: 16px;
+border-right: 16px solid var(--Neutral-100, #FFF);
   }
 
   .placeholder-dropdown{

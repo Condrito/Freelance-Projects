@@ -12,6 +12,7 @@ flex-direction: column;
 justify-content: center;
 align-items: stretch;
 flex-shrink: 0;
+height: 154px;
 background: var(--Primary-900, #104B76);
 }
 .footer-container{

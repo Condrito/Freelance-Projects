@@ -242,6 +242,7 @@ const FormularioEs = () => {
                     )}
                   </div>
                 </div>
+
                 <div className="formulario-inputs-validation-box">
                   <select
                     className="formulario-input-select"
