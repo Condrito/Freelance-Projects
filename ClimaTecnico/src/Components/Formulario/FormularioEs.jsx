@@ -247,11 +247,12 @@ const FormularioEs = () => {
                   <select
                     className="formulario-input-select"
                     name="servicio"
+                    placeholder=" Interesado en..."
                     required
                     value={formValues.servicio}
                     onChange={handleInputChange}
                   >
-                    <option className="placeholder-dropdown" value="" disabled>
+                    <option value="" disabled hidden>
                       Interesado en...
                     </option>
                     <option value="Mantenimiento, instalación y reparación">

@@ -4,14 +4,23 @@
    
       border-right: 16px solid var(--Neutral-100, #FFF);
       
-     
+      display: none;
     
-    color: var(--Neutral-700, #828282);  
+  
+      
   }
-  
-
-  
+ .pp{
+  padding: 10px;
+  background-color: darkblue;
+ }
+  option{
  
+    color: var(--Neutral-700, #828282);
+    
+   
+   
+  }
+
 
   
 /* Media query para desktop */
@@ -157,17 +166,8 @@ margin-bottom: 16px;
  
 
 
-  .placeholder-dropdown{
-    color: var(--Neutral-700, #828282);
    
 
-/* Text/XS */
-font-family: Montserrat;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 20px; /* 142.857% */
-  }
 
   .formulario-textarea{
     display: flex;

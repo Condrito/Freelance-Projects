@@ -82,85 +82,88 @@ const HeroCat = () => {
             <img className="onda-vector" src="Onda@3x.svg" alt="onda naranja" />
           </div>
         </div>
-        <div className="hero-info-container">
-          <h1>EL TEU CONFORT, EN LES MILLORS MANS</h1>
-          <p>Experts en sistemes de climatització</p>
-        </div>
-        <div className="hero-formulario">
-          <div className="hero-formulario-info">
-            <h5>Vols saber-ne més?</h5>
-            <p>
-              Deixa'ns el teu mòbil i ens posarem en contacte el més aviat
-              possible
-            </p>
+
+        <div className="hero-content">
+          <div className="hero-info-container">
+            <h1>EL TEU CONFORT, EN LES MILLORS MANS</h1>
+            <p>Experts en sistemes de climatització</p>
           </div>
-          <div className="form-box-box">
-            <form
-              className="contact-form-content"
-              onSubmit={handleFormSubmit}
-              noValidate
-            >
-              <div className="form-inputs-content">
-                <div className="form-inputs-box">
-                  <input
-                    className="contact-form-input"
-                    id="name"
-                    type="text"
-                    name="name"
-                    placeholder="Nom"
-                    required
-                    value={formValues.name}
-                    onChange={handleInputChange}
-                  />
-                  {validationErrors.name && (
-                    <div className="validator-message-box">
-                      <p className="validator-message">
-                        {validationErrors.name}
-                      </p>
-                    </div>
-                  )}
-                </div>
-
-                <div className="form-inputs-box">
-                  <input
-                    className="contact-form-input"
-                    id="phone"
-                    type="tel"
-                    name="phone"
-                    placeholder="Teléfon"
-                    required
-                    pattern="^[0-9\s-]{9,}$"
-                    value={formValues.phone}
-                    onChange={handleInputChange}
-                  />
-                  {validationErrors.phone && (
-                    <div className="validator-message-box">
-                      <p className="validator-message">
-                        {validationErrors.phone}
-                      </p>
-                    </div>
-                  )}
-                </div>
-              </div>
-              {isModalOpen && (
-                <Modal setIsModalOpen={setIsModalOpen}>
-                  <p className="send-text">
-                    El teu missatge s'ha enviat correctament!
-                  </p>
-                  <p className="send-text-secondary">
-                    Aviat ens posarem en contacte amb tu
-                  </p>
-                </Modal>
-              )}
-
-              <button
-                className="contact-btn"
-                type="submit"
-                disabled={state.submitting || isModalOpen}
+          <div className="hero-formulario">
+            <div className="hero-formulario-info">
+              <h5>Vols saber-ne més?</h5>
+              <p>
+                Deixa'ns el teu mòbil i ens posarem en contacte el més aviat
+                possible
+              </p>
+            </div>
+            <div className="form-box-box">
+              <form
+                className="contact-form-content"
+                onSubmit={handleFormSubmit}
+                noValidate
               >
-                <p>Truqueu-me</p>
-              </button>
-            </form>
+                <div className="form-inputs-content">
+                  <div className="form-inputs-box">
+                    <input
+                      className="contact-form-input"
+                      id="name"
+                      type="text"
+                      name="name"
+                      placeholder="Nom"
+                      required
+                      value={formValues.name}
+                      onChange={handleInputChange}
+                    />
+                    {validationErrors.name && (
+                      <div className="validator-message-box">
+                        <p className="validator-message">
+                          {validationErrors.name}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="form-inputs-box">
+                    <input
+                      className="contact-form-input"
+                      id="phone"
+                      type="tel"
+                      name="phone"
+                      placeholder="Teléfon"
+                      required
+                      pattern="^[0-9\s-]{9,}$"
+                      value={formValues.phone}
+                      onChange={handleInputChange}
+                    />
+                    {validationErrors.phone && (
+                      <div className="validator-message-box">
+                        <p className="validator-message">
+                          {validationErrors.phone}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+                {isModalOpen && (
+                  <Modal setIsModalOpen={setIsModalOpen}>
+                    <p className="send-text">
+                      El teu missatge s'ha enviat correctament!
+                    </p>
+                    <p className="send-text-secondary">
+                      Aviat ens posarem en contacte amb tu
+                    </p>
+                  </Modal>
+                )}
+
+                <button
+                  className="contact-btn"
+                  type="submit"
+                  disabled={state.submitting || isModalOpen}
+                >
+                  <p>Truqueu-me</p>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
