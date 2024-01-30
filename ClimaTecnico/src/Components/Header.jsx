@@ -40,6 +40,9 @@ const Header = () => {
           <a href="/#servicios">
             {language === "castellano" ? "Servicios" : "Serveis"}
           </a>
+          <Link to="/projects">
+            {language === "castellano" ? "Proyectos" : "Projectes"}
+          </Link>
           <Link to="/contact">
             {language === "castellano" ? "Contacto" : "Contacte"}
           </Link>
@@ -97,6 +100,15 @@ const Header = () => {
               >
                 {language === "castellano" ? "Servicios" : "Serveis"}
               </a>
+            </div>
+            <div className="hamburger-menu-option-box">
+              <Link
+                to="/projects"
+                className="link-button"
+                onClick={closeMobileMenu} // Cierra el menú al hacer clic en el enlace
+              >
+                {language === "castellano" ? "Proyectos" : "Projectes"}
+              </Link>
             </div>
 
             <div className="hamburger-menu-option-box">

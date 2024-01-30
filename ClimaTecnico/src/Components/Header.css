@@ -14,7 +14,7 @@ header{
     padding: 8px 48px;
     justify-content: space-between;
     align-items: center;
-    gap: 100px;
+   
     
 }
 .logo-climatecnico{
@@ -85,7 +85,9 @@ align-items: center;
         display: none;
     }
     
-    
+    .idiomas-container{
+        padding-left: 48px;
+    }
     }
     /* Media query para tabletas */
     @media (min-width: 744px) and (max-width: 1024px) {

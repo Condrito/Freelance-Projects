@@ -11,7 +11,7 @@ const Footer = () => {
           <Link to="/">
             <img
               className="logo-footer-desktop"
-              src="LogoFooterDesktop@3x.svg"
+              src="Logo@3x.svg"
               alt="Logo Climatecnico"
             />
             <img
@@ -28,6 +28,9 @@ const Footer = () => {
               <a href="/#servicios">
                 {language === "castellano" ? "Servicios" : "Serveis"}
               </a>
+              <Link to="/projects">
+                {language === "castellano" ? "Proyectos" : "Projectes"}
+              </Link>
               <Link to="/contact">
                 {language === "castellano" ? "Contacto" : "Contacte"}
               </Link>
@@ -54,6 +57,9 @@ const Footer = () => {
             <a href="/#servicios">
               {language === "castellano" ? "Servicios" : "Serveis"}
             </a>
+            <Link to="/projects">
+              {language === "castellano" ? "Proyectos" : "Projectes"}
+            </Link>
             <Link to="/contact">
               {language === "castellano" ? "Contacto" : "Contacte"}
             </Link>
