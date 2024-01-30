@@ -2,9 +2,17 @@
 
 
 
-
-
-
+.contact-button:hover{
+   
+background: var(--Primary-900, #104B76);
+}
+.contact-button:active{
+    
+    background: var(--Secondary-500, #EB6933);
+}
+.contact-button:disabled{
+background: var(--Neutral-400, #D2D2D2);
+}
 
 /* Media query para desktop */
 

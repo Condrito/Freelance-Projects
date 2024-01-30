@@ -117,7 +117,17 @@ align-items: flex-start;
 gap: 4px;
 flex: 1 0 0;
 }
-
+.contact-btn:hover{
+   
+    background: var(--Primary-900, #104B76);
+    }
+    .contact-btn:active{
+        
+        background: var(--Secondary-500, #EB6933);
+    }
+    .contact-btn:disabled{
+    background: var(--Neutral-400, #D2D2D2);
+    }
 /* Media query para desktop */
 
 @media (min-width: 1024px) {

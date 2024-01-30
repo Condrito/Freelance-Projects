@@ -168,7 +168,10 @@ const ContactoEs = () => {
           <h4>+34 611 712 312</h4>
         </div>
         <div className="datos-contacto-box">
-          <a href="https://www.instagram.com/climatecnico/">
+          <a
+            className="link-insta"
+            href="https://www.instagram.com/climatecnico/"
+          >
             <img
               className="contacto-icon"
               src="Instagram-contacto@3x.svg"

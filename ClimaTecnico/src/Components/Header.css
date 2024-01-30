@@ -1,3 +1,7 @@
+
+
+
+
 header{
   
     position: absolute;
@@ -61,6 +65,10 @@ cursor: pointer;
     bottom: 0px; /* Aumenta o reduce este valor para ajustar la separación */
     width: 100%;
     border-bottom: 3px solid #187BD3; /* Grosor y color del subrayado */
+  }
+  .link-button:active{
+    color: var(--Secondary-500, #EB6933);
+
   }
 
 
@@ -353,4 +361,4 @@ gap: 16px;
         
       
         
-     
+       

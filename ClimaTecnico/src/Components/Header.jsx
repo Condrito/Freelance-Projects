@@ -34,16 +34,16 @@ const Header = () => {
         </div>
 
         <div className="liks-header nav-desktop">
-          <a href="/#descripcion">
+          <a className="link" href="/#descripcion">
             {language === "castellano" ? "¿Quiénes somos?" : "Qui som?"}
           </a>
-          <a href="/#servicios">
+          <a className="link" href="/#servicios">
             {language === "castellano" ? "Servicios" : "Serveis"}
           </a>
-          <Link to="/projects">
+          <Link className="link" to="/projects">
             {language === "castellano" ? "Proyectos" : "Projectes"}
           </Link>
-          <Link to="/contact">
+          <Link className="link" to="/contact">
             {language === "castellano" ? "Contacto" : "Contacte"}
           </Link>
         </div>
