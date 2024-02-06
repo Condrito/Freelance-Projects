@@ -147,11 +147,13 @@ const ContactoEs = () => {
         </div>
         <div className="contacto-hero-container">
           <h1>¿quieres transformar tu ambiente?</h1>
-          <p>
-            Contacta con nosotros para poder asesorarte y ofrecerte la mejor
-            opción adaptada a tus necesidades de consumo.
-          </p>
-          <p>¡Estaremos encantados de ayudarte!</p>
+          <div className="text-hero-subtitle">
+            <p>
+              Contacta con nosotros para que podamos asesorarte y ofrecerte la
+              mejor opción
+            </p>
+            <p>¡Estaremos encantados de ayudarte!</p>
+          </div>
         </div>
       </div>
       <div className="datos-contacto-container">
@@ -165,7 +167,7 @@ const ContactoEs = () => {
             src="Phone-contacto@3x.svg"
             alt="icono phone"
           />
-          <h4>+34 611 712 312</h4>
+          <h4>611 712 312</h4>
         </div>
         <div className="datos-contacto-box">
           <a

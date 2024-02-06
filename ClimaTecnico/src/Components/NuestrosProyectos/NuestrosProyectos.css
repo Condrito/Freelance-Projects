@@ -11,15 +11,16 @@
 @media (min-width: 1024px) {
     .proyectos-content-container{
         display: flex;
-        flex-shrink: 0;
+      justify-content: center;
        position: relative;
-        height: calc(619px - 340px);
-        align-items: center;
-        flex-shrink: 0;
+        height: calc(578px - 0px);
+        justify-content: center;
+        align-items: flex-start;
+       
         width: calc(100% - 0px);
-        justify-content: space-around;
-        align-items: center;
-        padding: 170px 0 170px 0;
+        
+     
+      
 
     }
     .proyectos-background {
@@ -34,7 +35,7 @@
    
     z-index: -5;
     
-    height: 619px;
+    height: 578px;
         
        
       }
@@ -45,16 +46,16 @@
         top: 0px;
         left: 0px;
        z-index: -3;
-       height: 619px;
+       height: 578px;
        background: rgba(0, 0, 0, 0.60);
         
     }
     .proyectos-hero-container{
         display: flex;
 width: calc(100% - 240px);
-padding: 104px 120px 80px 120px;
+padding: calc(104px + 109px) 120px 80px 120px;
 flex-direction: column;
-justify-content: center;
+justify-content: flex-start;
 align-items: center;
 gap: 24px;
     }
@@ -93,7 +94,7 @@ width: 600px;
           left: -1%;
           z-index: -9;
           width: 101%;
-          height: 1341px;
+          height: 1250px;
          
       }
 
@@ -152,13 +153,13 @@ align-self: stretch;
         display: flex;
         flex-shrink: 0;
        position: relative;
-        height: calc(627px - 267px);
+        height: calc(627px - 0px);
         align-items: center;
         flex-shrink: 0;
         width: calc(100% - 0px);
-        justify-content: space-around;
-        align-items: center;
-        padding: 94px 0 173px 0;
+        justify-content: center;
+        align-items: flex-start;
+       
 
     }
     .proyectos-background {
@@ -196,7 +197,7 @@ align-self: stretch;
     .proyectos-hero-container{
         display: flex;
         width: calc(100% - 80px);
-        padding: 80px 40px;
+        padding: calc(80px + 96px) 40px 80px 40px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -297,13 +298,13 @@ line-height: 24px; /* 150% */
         display: flex;
         flex-shrink: 0;
        position: relative;
-        height: calc(587px - 257px);
+        height: calc(571px - 0px);
         align-items: center;
         flex-shrink: 0;
         width: calc(100% - 0px);
-        justify-content: space-around;
-        align-items: center;
-        padding: 98px 0 159px 0;
+        justify-content: center;
+        align-items: flex-start;
+        
 
     }
     .proyectos-background {
@@ -319,7 +320,7 @@ line-height: 24px; /* 150% */
     z-index: -5;
     
      
-        height: 587px;
+        height: 571px;
         
        
       }
@@ -330,7 +331,7 @@ line-height: 24px; /* 150% */
         top: 0px;
         left: 0px;
        z-index: -3;
-        height: 587px;
+        height: 571px;
         
         background: rgba(0, 0, 0, 0.60);
     
@@ -341,7 +342,7 @@ line-height: 24px; /* 150% */
     .proyectos-hero-container{
         display: flex;
         width: calc(100% - 48px);
-        padding: 64px 24px 80px 24px;
+        padding: calc(64px + 93px) 24px 80px 24px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -380,7 +381,7 @@ margin: 0;
           left: -1%;
           z-index: -9;
           width: 101%;
-          height: 1168px;
+          height: 1135px;
          
       }
 

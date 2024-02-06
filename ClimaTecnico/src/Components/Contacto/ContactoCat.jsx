@@ -46,7 +46,7 @@ const ContactoCat = () => {
             src="Error@3x.svg"
             alt="icono exclamación"
           />
-          <p className="error-text">El format deu ser nom@exemple.com</p>
+          <p className="error-text">El format ha de ser nom@exemple.com</p>
         </div>
       );
     }
@@ -147,11 +147,13 @@ const ContactoCat = () => {
         </div>
         <div className="contacto-hero-container">
           <h1>Vols transformar el teu ambient?</h1>
-          <p>
-            Posa't en contacte amb nosaltres per poder assessorar-te i oferir-te
-            la millor opció adaptada a les teves necessitats de consum.
-          </p>
-          <p>Estarem encantats d'ajudar-te!</p>
+          <div className="text-hero-subtitle">
+            <p>
+              Posa't en contacte amb nosaltres per poder assessorar-te i
+              oferir-te la millor opció
+            </p>
+            <p>Estarem encantats d'ajudar-te!</p>
+          </div>
         </div>
       </div>
       <div className="datos-contacto-container">
@@ -165,7 +167,7 @@ const ContactoCat = () => {
             src="Phone-contacto@3x.svg"
             alt="icono phone"
           />
-          <h4>+34 611 712 312</h4>
+          <h4>611 712 312</h4>
         </div>
         <div className="datos-contacto-box">
           <a

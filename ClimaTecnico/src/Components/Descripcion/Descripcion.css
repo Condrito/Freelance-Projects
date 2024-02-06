@@ -7,7 +7,7 @@
     .descripcion{
         display: flex;
         width: calc(100% - 160px);
-        padding: 190px 80px 80px 160px;
+        padding: 140px 80px 120px 80px;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;

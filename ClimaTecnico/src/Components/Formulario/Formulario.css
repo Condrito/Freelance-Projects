@@ -40,8 +40,8 @@
   }
   .formulario-background {
     background-image: url(/Cliente@3x.png);
-    background-size:cover;
-    background-position: center bottom ; /* Centra la imagen en el eje X e Y */
+    background-size: cover;
+    background-position: top center;  /* Centra la imagen en el eje X e Y */
    position: absolute;
   
     width: calc(100% - 0px);
@@ -107,7 +107,7 @@ line-height: 42px; /* 105% */
 
   .formulario-container{
     display: flex;
-max-width: 569px;
+width: 771px;
 padding: 40px 32px;
 flex-direction: column;
 justify-content: center;

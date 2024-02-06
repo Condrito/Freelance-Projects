@@ -46,7 +46,7 @@ const FormularioCat = () => {
             src="Error@3x.svg"
             alt="icono exclamación"
           />
-          <p className="error-text">El format deu ser nom@exemple.com</p>
+          <p className="error-text">El format ha de ser nom@exemple.com</p>
         </div>
       );
     }

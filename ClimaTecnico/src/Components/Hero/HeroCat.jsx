@@ -129,7 +129,7 @@ const HeroCat = () => {
                       id="phone"
                       type="tel"
                       name="phone"
-                      placeholder="Teléfon"
+                      placeholder="Telèfon"
                       required
                       pattern="^[0-9\s-]{9,}$"
                       value={formValues.phone}
