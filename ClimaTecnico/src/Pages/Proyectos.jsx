@@ -1,3 +1,4 @@
+import NuestrosProyectosCat from "../Components/NuestrosProyectos/NuestrosProyectosCat";
 import NuestrosProyectosEs from "../Components/NuestrosProyectos/NuestrosProyectosEs";
 import { useLanguage } from "../Context/LanguageContext";
 import "./Proyectos.css";
@@ -12,7 +13,9 @@ const Proyectos = () => {
         </div>
       ) : (
         <>
-          <div className="proyectos-page"></div>
+          <div className="proyectos-page">
+            <NuestrosProyectosCat />
+          </div>
         </>
       )}
     </>
