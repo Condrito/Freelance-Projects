@@ -1,3 +1,5 @@
+// DescripcionES.jsx
+import React from "react";
 import "./Descripcion.css";
 
 const DescripcionES = () => {

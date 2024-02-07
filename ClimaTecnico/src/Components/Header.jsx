@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useLanguage } from "../Context/LanguageContext";
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const { language, toggleLanguage } = useLanguage();
@@ -24,28 +24,28 @@ const Header = () => {
             isMobileMenuOpen ? "blue" : "transparent"
           }`}
         >
-          <Link to="/">
+          <NavLink to="/">
             <img
               className="logo-climatecnico"
               src="Climatecnico@3x.svg"
               alt="logo-Climatecnico"
             />
-          </Link>
+          </NavLink>
         </div>
 
         <div className="liks-header nav-desktop">
-          <a className="link" href="/#descripcion">
+          <a href="/#descripcion" className="link">
             {language === "castellano" ? "¿Quiénes somos?" : "Qui som?"}
           </a>
-          <a className="link" href="/#servicios">
+          <a href="/#servicios" className="link">
             {language === "castellano" ? "Servicios" : "Serveis"}
           </a>
-          <Link className="link" to="/projects">
+          <NavLink to="/projects" className="link">
             {language === "castellano" ? "Proyectos" : "Projectes"}
-          </Link>
-          <Link className="link" to="/contact">
+          </NavLink>
+          <NavLink to="/contact" className="link">
             {language === "castellano" ? "Contacto" : "Contacte"}
-          </Link>
+          </NavLink>
         </div>
         <div className="idiomas-container nav-desktop">
           <span
@@ -87,7 +87,7 @@ const Header = () => {
               <a
                 href="/#descripcion"
                 className="link-button"
-                onClick={closeMobileMenu} // Cierra el menú al hacer clic en el enlace
+                onClick={() => closeMobileMenu()}
               >
                 {language === "castellano" ? "¿Quiénes somos?" : "Qui som?"}
               </a>
@@ -96,30 +96,33 @@ const Header = () => {
               <a
                 href="/#servicios"
                 className="link-button"
-                onClick={closeMobileMenu} // Cierra el menú al hacer clic en el enlace
+                onClick={() => closeMobileMenu()}
               >
                 {language === "castellano" ? "Servicios" : "Serveis"}
               </a>
             </div>
-            <div className="hamburger-menu-option-box">
-              <Link
-                to="/projects"
-                className="link-button"
-                onClick={closeMobileMenu} // Cierra el menú al hacer clic en el enlace
-              >
-                {language === "castellano" ? "Proyectos" : "Projectes"}
-              </Link>
-            </div>
-
-            <div className="hamburger-menu-option-box">
-              <Link
-                to="/contact"
-                className="link-button"
-                onClick={closeMobileMenu} // Cierra el menú al hacer clic en el enlace
-              >
-                {language === "castellano" ? "Contacto" : "Contacte"}
-              </Link>
-            </div>
+            <NavLink to="/projects">
+              <div className="hamburger-menu-option-box">
+                <NavLink
+                  to="/projects"
+                  className="link-button"
+                  onClick={closeMobileMenu} // Cierra el menú al hacer clic en el enlace
+                >
+                  {language === "castellano" ? "Proyectos" : "Projectes"}
+                </NavLink>
+              </div>
+            </NavLink>
+            <NavLink to="/contact">
+              <div className="hamburger-menu-option-box">
+                <NavLink
+                  to="/contact"
+                  className="link-button"
+                  onClick={closeMobileMenu} // Cierra el menú al hacer clic en el enlace
+                >
+                  {language === "castellano" ? "Contacto" : "Contacte"}
+                </NavLink>
+              </div>
+            </NavLink>
             <div className="hamburger-menu-option-box">
               <div className="option-box-idiomas">
                 <span

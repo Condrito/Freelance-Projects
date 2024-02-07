@@ -6,19 +6,17 @@ import "./Contact.css";
 const Contact = () => {
   const { language } = useLanguage();
   return (
-    <>
+    <div id="top">
       {language === "castellano" ? (
         <div className="contact-page">
           <ContactoEs />
         </div>
       ) : (
-        <>
-          <div className="contact-page">
-            <ContactoCat />
-          </div>
-        </>
+        <div className="contact-page">
+          <ContactoCat />
+        </div>
       )}
-    </>
+    </div>
   );
 };
 

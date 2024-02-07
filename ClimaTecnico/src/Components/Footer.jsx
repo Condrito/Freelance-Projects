@@ -4,6 +4,14 @@ import "./Footer.css";
 
 const Footer = () => {
   const { language } = useLanguage();
+
+  // Función para manejar el clic en los enlaces del footer
+  const handleFooterLinkClick = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <>
       <footer className="footer-desktop">

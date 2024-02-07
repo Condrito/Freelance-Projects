@@ -6,19 +6,17 @@ import "./Proyectos.css";
 const Proyectos = () => {
   const { language } = useLanguage();
   return (
-    <>
+    <div id="top">
       {language === "castellano" ? (
         <div className="proyectos-page">
           <NuestrosProyectosEs />
         </div>
       ) : (
-        <>
-          <div className="proyectos-page">
-            <NuestrosProyectosCat />
-          </div>
-        </>
+        <div className="proyectos-page">
+          <NuestrosProyectosCat />
+        </div>
       )}
-    </>
+    </div>
   );
 };
 
