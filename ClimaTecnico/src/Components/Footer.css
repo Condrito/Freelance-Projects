@@ -1,4 +1,6 @@
-
+.link{
+    cursor: pointer;
+}
 @media (min-width: 1024px) {
     
 .footer-movile{

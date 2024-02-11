@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { useLanguage } from "../Context/LanguageContext";
 import "./Header.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const { language, toggleLanguage } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -14,6 +15,19 @@ const Header = () => {
   // Función para cerrar el menú cuando se hace clic en un enlace del desplegable
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
+  };
+
+  // Función para manejar el clic en los enlaces del menú
+  const handleMenuLinkClick = (id) => {
+    navigate("/"); // Navega a la página de inicio
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        const elementRect = element.getBoundingClientRect();
+        const targetY = elementRect.top + window.scrollY - 34;
+        window.scrollTo({ top: targetY, behavior: "smooth" });
+      }
+    }, 100);
   };
 
   return (
@@ -34,16 +48,32 @@ const Header = () => {
         </div>
 
         <div className="liks-header nav-desktop">
-          <a href="/#descripcion" className="link">
+          <a
+            href="/#descripcion"
+            className="link"
+            onClick={() => handleMenuLinkClick("descripcion")}
+          >
             {language === "castellano" ? "¿Quiénes somos?" : "Qui som?"}
           </a>
-          <a href="/#servicios" className="link">
+          <a
+            href="/#servicios"
+            className="link"
+            onClick={() => handleMenuLinkClick("servicios")}
+          >
             {language === "castellano" ? "Servicios" : "Serveis"}
           </a>
-          <NavLink to="/projects" className="link">
+          <NavLink
+            to="/projects"
+            className="link"
+            onClick={() => handleMenuLinkClick("projects")}
+          >
             {language === "castellano" ? "Proyectos" : "Projectes"}
           </NavLink>
-          <NavLink to="/contact" className="link">
+          <NavLink
+            to="/contact"
+            className="link"
+            onClick={() => handleMenuLinkClick("contact")}
+          >
             {language === "castellano" ? "Contacto" : "Contacte"}
           </NavLink>
         </div>
@@ -83,41 +113,81 @@ const Header = () => {
           />
 
           <div className={`dropdown ${isMobileMenuOpen ? "show" : ""}`}>
-            <div className="hamburger-menu-option-box">
-              <a
-                href="/#descripcion"
-                className="link-button"
-                onClick={() => closeMobileMenu()}
-              >
-                {language === "castellano" ? "¿Quiénes somos?" : "Qui som?"}
-              </a>
-            </div>
-            <div className="hamburger-menu-option-box">
-              <a
-                href="/#servicios"
-                className="link-button"
-                onClick={() => closeMobileMenu()}
-              >
-                {language === "castellano" ? "Servicios" : "Serveis"}
-              </a>
-            </div>
-            <NavLink to="/projects">
+            <a
+              href="/#descripcion"
+              onClick={() => {
+                closeMobileMenu();
+                handleMenuLinkClick("descripcion");
+              }}
+            >
+              <div className="hamburger-menu-option-box">
+                <a
+                  href="/#descripcion"
+                  className="link-button"
+                  onClick={() => {
+                    closeMobileMenu();
+                    handleMenuLinkClick("descripcion");
+                  }}
+                >
+                  {language === "castellano" ? "¿Quiénes somos?" : "Qui som?"}
+                </a>
+              </div>
+            </a>
+            <a
+              href="/#servicios"
+              onClick={() => {
+                closeMobileMenu();
+                handleMenuLinkClick("servicios");
+              }}
+            >
+              <div className="hamburger-menu-option-box">
+                <a
+                  href="/#servicios"
+                  className="link-button"
+                  onClick={() => {
+                    closeMobileMenu();
+                    handleMenuLinkClick("servicios");
+                  }}
+                >
+                  {language === "castellano" ? "Servicios" : "Serveis"}
+                </a>
+              </div>
+            </a>
+            <NavLink
+              to="/projects"
+              onClick={() => {
+                closeMobileMenu();
+                handleMenuLinkClick("projects");
+              }}
+            >
               <div className="hamburger-menu-option-box">
                 <NavLink
                   to="/projects"
                   className="link-button"
-                  onClick={closeMobileMenu} // Cierra el menú al hacer clic en el enlace
+                  onClick={() => {
+                    closeMobileMenu();
+                    handleMenuLinkClick("projects");
+                  }}
                 >
                   {language === "castellano" ? "Proyectos" : "Projectes"}
                 </NavLink>
               </div>
             </NavLink>
-            <NavLink to="/contact">
+            <NavLink
+              to="/contact"
+              onClick={() => {
+                closeMobileMenu();
+                handleMenuLinkClick("contact");
+              }}
+            >
               <div className="hamburger-menu-option-box">
                 <NavLink
                   to="/contact"
                   className="link-button"
-                  onClick={closeMobileMenu} // Cierra el menú al hacer clic en el enlace
+                  onClick={() => {
+                    closeMobileMenu();
+                    handleMenuLinkClick("contact");
+                  }}
                 >
                   {language === "castellano" ? "Contacto" : "Contacte"}
                 </NavLink>

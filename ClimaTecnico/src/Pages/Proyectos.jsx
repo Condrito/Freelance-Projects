@@ -5,8 +5,9 @@ import "./Proyectos.css";
 
 const Proyectos = () => {
   const { language } = useLanguage();
+
   return (
-    <div id="top">
+    <div id="projects">
       {language === "castellano" ? (
         <div className="proyectos-page">
           <NuestrosProyectosEs />

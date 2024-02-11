@@ -1,22 +1,29 @@
-import { Link } from "react-router-dom";
 import { useLanguage } from "../Context/LanguageContext";
 import "./Footer.css";
 
+import { Link, useNavigate } from "react-router-dom";
+
 const Footer = () => {
   const { language } = useLanguage();
+  const navigate = useNavigate();
 
   // Función para manejar el clic en los enlaces del footer
   const handleFooterLinkClick = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    navigate("/");
+
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      const elementRect = element.getBoundingClientRect();
+      const targetY = elementRect.top + window.scrollY - 34;
+
+      window.scrollTo({ top: targetY, behavior: "smooth" });
+    }, 100);
   };
   return (
     <>
       <footer className="footer-desktop">
         <div className="footer-container">
-          <Link to="/">
+          <Link to="/" onClick={() => handleFooterLinkClick("home")}>
             <img
               className="logo-footer-desktop"
               src="Logo@3x.svg"
@@ -30,16 +37,30 @@ const Footer = () => {
           </Link>
           <div className="footer-info-container">
             <div className="links-footer-container">
-              <a className="link" href="/#descripcion">
+              <a
+                className="link"
+                onClick={() => handleFooterLinkClick("descripcion")}
+              >
                 {language === "castellano" ? "¿Quiénes somos?" : "Qui som?"}
               </a>
-              <a className="link" href="/#servicios">
+              <a
+                className="link"
+                onClick={() => handleFooterLinkClick("servicios")}
+              >
                 {language === "castellano" ? "Servicios" : "Serveis"}
               </a>
-              <Link className="link" to="/projects">
+              <Link
+                className="link"
+                to="/projects"
+                onClick={() => handleFooterLinkClick("projects")}
+              >
                 {language === "castellano" ? "Proyectos" : "Projectes"}
               </Link>
-              <Link className="link" to="/contact">
+              <Link
+                className="link"
+                to="/contact"
+                onClick={() => handleFooterLinkClick("contact")}
+              >
                 {language === "castellano" ? "Contacto" : "Contacte"}
               </Link>
               <a
@@ -62,16 +83,30 @@ const Footer = () => {
       <footer className="footer-movile">
         <div className="footer-info-container">
           <div className="links-footer-container">
-            <a className="link" href="/#descripcion">
+            <a
+              className="link"
+              onClick={() => handleFooterLinkClick("descripcion")}
+            >
               {language === "castellano" ? "¿Quiénes somos?" : "Qui som?"}
             </a>
-            <a className="link" href="/#servicios">
+            <a
+              className="link"
+              onClick={() => handleFooterLinkClick("servicios")}
+            >
               {language === "castellano" ? "Servicios" : "Serveis"}
             </a>
-            <Link className="link" to="/projects">
+            <Link
+              className="link"
+              to="/projects"
+              onClick={() => handleFooterLinkClick("projects")}
+            >
               {language === "castellano" ? "Proyectos" : "Projectes"}
             </Link>
-            <Link className="link" to="/contact">
+            <Link
+              className="link"
+              to="/contact"
+              onClick={() => handleFooterLinkClick("contact")}
+            >
               {language === "castellano" ? "Contacto" : "Contacte"}
             </Link>
           </div>
@@ -88,7 +123,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="logo-copyright-container">
-          <Link to="/">
+          <Link to="/" onClick={() => handleFooterLinkClick("home")}>
             <img
               className="logo-footer-mobile"
               src="LogoFooterMobile@3x.svg"

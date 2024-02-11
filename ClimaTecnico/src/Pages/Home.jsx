@@ -29,7 +29,7 @@ const Home = () => {
   return (
     <>
       {language === "castellano" ? (
-        <div className="home">
+        <div id="home" className="home">
           <HeroES />
           <DescripcionES />
           <ValoresEs />
@@ -38,7 +38,7 @@ const Home = () => {
         </div>
       ) : (
         <>
-          <div className="home">
+          <div id="home" className="home">
             <HeroCat />
             <DescripcionCat />
             <ValoresCat />
