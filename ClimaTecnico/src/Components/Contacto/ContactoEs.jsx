@@ -157,31 +157,34 @@ const ContactoEs = () => {
         </div>
       </div>
       <div className="datos-contacto-container">
-        <div className="datos-contacto-box">
+        <a
+          className="datos-contacto-box"
+          href="mailto:climatecnico2023@gmail.com"
+        >
           <img className="contacto-icon" src="Mail@3x.svg" alt="icono e-mail" />
           <h4>climatecnico2023@gmail.com</h4>
-        </div>
-        <div className="datos-contacto-box">
+        </a>
+        <a className="datos-contacto-box" href="tel:611712312">
           <img
             className="contacto-icon"
             src="Phone-contacto@3x.svg"
             alt="icono phone"
           />
+
           <h4>611 712 312</h4>
-        </div>
-        <div className="datos-contacto-box">
-          <a
-            className="link-insta"
-            href="https://www.instagram.com/climatecnico/"
-          >
-            <img
-              className="contacto-icon"
-              src="Instagram-contacto@3x.svg"
-              alt="icono instagram"
-            />
-          </a>
+        </a>
+        <a
+          className="datos-contacto-box"
+          href="https://www.instagram.com/climatecnico/"
+        >
+          <img
+            className="contacto-icon"
+            src="Instagram-contacto@3x.svg"
+            alt="icono instagram"
+          />
+
           <h4>@climatecnico</h4>
-        </div>
+        </a>
       </div>
       <div className="contacto-formulario-container">
         <div className="formulario-container-box">
@@ -242,7 +245,8 @@ const ContactoEs = () => {
                       name="phone"
                       placeholder="Teléfono"
                       required
-                      pattern="^[0-9]{9}$"
+                      pattern="^[0-9\s-]{9,}$"
+                      maxLength="9" // Limitar a 9 caracteres
                       value={formValues.phone}
                       onChange={handleInputChange}
                     />
@@ -316,6 +320,7 @@ const ContactoEs = () => {
                     name="message"
                     placeholder="Cuéntanos más"
                     value={formValues.message}
+                    style={{ resize: "none" }} // Evitar redimensionamiento
                     onChange={handleInputChange}
                   />
                   {validationErrors.message && (

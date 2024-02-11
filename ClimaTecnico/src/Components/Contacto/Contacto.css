@@ -13,6 +13,12 @@ background: var(--Primary-900, #104B76);
 .contact-button:disabled{
 background: var(--Neutral-400, #D2D2D2);
 }
+.datos-contacto-box {
+    transition: transform 0.3s ease; /* Transición suave de 0.3 segundos */
+  }
+.datos-contacto-box:hover{
+    transform: scale(1.1);
+}
 
 /* Media query para desktop */
 
@@ -435,13 +441,14 @@ box-shadow: 4px 4px 8px 0px rgba(29, 113, 184, 0.16);
         align-items: center;
         gap: 48px;
     }
+    
     .datos-contacto-box{
         display: flex;
 flex-direction: column;
 align-items: center;
 gap: 16px;
     }
-    
+   
     .contacto-icon{
         width: 32px;
     height: 32px;

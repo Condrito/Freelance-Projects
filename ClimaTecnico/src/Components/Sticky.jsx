@@ -17,18 +17,18 @@ const Sticky = () => {
         </p>
 
         <div className="mail-telf-content">
-          <div className="mail-content">
+          <a className="mail-content" href="mailto:climatecnico2023@gmail.com">
             <img
               className="mail-icon"
               src="ic_baseline-mail@3x.svg"
               alt="mail-icon"
             />
             <p className="mail">climatecnico2023@gmail.com</p>
-          </div>
-          <div className="telefono-content">
+          </a>
+          <a className="telefono-content" href="tel:611712312">
             <img className="telefono-icon" src="Phone@3x.svg" alt="telf-icon" />
             <p className="telefono">611 712 312</p>
-          </div>
+          </a>
         </div>
       </div>
     </div>

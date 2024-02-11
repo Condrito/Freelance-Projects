@@ -35,6 +35,10 @@ letter-spacing: 0.36px;
     display: flex;
     flex-direction: row;
     gap: 8px;
+    transition: transform 0.3s ease;
+}
+.mail-content:hover{
+    transform: scale(1.1); 
 }
 
 .mail-icon{
@@ -42,7 +46,8 @@ letter-spacing: 0.36px;
 height: 16px;
 }
 .mail{
- 
+ text-decoration: none;
+ color: #FFF;
 text-align: center;
 font-size: 12px;
 font-style: normal;
@@ -51,10 +56,15 @@ line-height: 18px; /* 150% */
 letter-spacing: 0.36px;
 }
 
+
 .telefono-content{
     display: flex;
     flex-direction: row;
     gap: 8px;
+    transition: transform 0.3s ease;
+}
+.telefono-content:hover{
+    transform: scale(1.1); 
 }
 .telefono-icon{
     width: 16px;
@@ -62,13 +72,16 @@ height: 16px;
 }
 
 .telefono{
- 
+    color: #FFF;
+ text-decoration: none;
 font-size: 12px;
 font-style: normal;
 font-weight: 600;
 line-height: 18px; /* 150% */
 letter-spacing: 0.36px;
+
 }
+
 
 
 

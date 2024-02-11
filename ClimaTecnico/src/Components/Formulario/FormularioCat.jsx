@@ -209,7 +209,8 @@ const FormularioCat = () => {
                       name="phone"
                       placeholder="Telèfon"
                       required
-                      pattern="^[0-9]{9}$"
+                      pattern="^[0-9\s-]{9,}$"
+                      maxLength="9" // Limitar a 9 caracteres
                       value={formValues.phone}
                       onChange={handleInputChange}
                     />
@@ -283,6 +284,7 @@ const FormularioCat = () => {
                     name="message"
                     placeholder="Explica'ns més"
                     value={formValues.message}
+                    style={{ resize: "none" }} // Evitar redimensionamiento
                     onChange={handleInputChange}
                   />
                   {validationErrors.message && (

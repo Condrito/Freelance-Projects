@@ -132,6 +132,7 @@ const HeroCat = () => {
                       placeholder="Telèfon"
                       required
                       pattern="^[0-9\s-]{9,}$"
+                      maxLength="9" // Limitar a 9 caracteres
                       value={formValues.phone}
                       onChange={handleInputChange}
                     />

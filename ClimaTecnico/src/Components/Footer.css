@@ -1,6 +1,20 @@
 .link{
     cursor: pointer;
 }
+.link-insta{
+    transition: transform 0.3s ease; /* Transición suave de 0.3 segundos */
+  }
+
+  .link-insta:hover {
+    transform: scale(1.3); /* Escala aumentada al 110% */
+  }
+
+  .icono-home{
+    transition: transform 0.3s ease;
+  }
+  .icono-home:hover {
+    transform: scale(1.1); /* Escala aumentada al 110% */
+  }
 @media (min-width: 1024px) {
     
 .footer-movile{

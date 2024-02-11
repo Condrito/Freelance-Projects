@@ -209,7 +209,8 @@ const FormularioEs = () => {
                       name="phone"
                       placeholder="Teléfono"
                       required
-                      pattern="^[0-9]{9}$"
+                      pattern="^[0-9\s-]{9,}$"
+                      maxLength="9" // Limitar a 9 caracteres
                       value={formValues.phone}
                       onChange={handleInputChange}
                     />
@@ -286,6 +287,7 @@ const FormularioEs = () => {
                     placeholder="Cuéntanos más"
                     value={formValues.message}
                     onChange={handleInputChange}
+                    style={{ resize: "none" }} // Evitar redimensionamiento
                   />
                   {validationErrors.message && (
                     <div className="validator-message-box">

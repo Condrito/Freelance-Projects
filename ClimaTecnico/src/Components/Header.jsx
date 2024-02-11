@@ -38,7 +38,7 @@ const Header = () => {
             isMobileMenuOpen ? "blue" : "transparent"
           }`}
         >
-          <NavLink to="/">
+          <NavLink className="icono-home" to="/">
             <img
               className="logo-climatecnico"
               src="Climatecnico@3x.svg"

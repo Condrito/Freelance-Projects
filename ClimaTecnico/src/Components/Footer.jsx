@@ -23,7 +23,11 @@ const Footer = () => {
     <>
       <footer className="footer-desktop">
         <div className="footer-container">
-          <Link to="/" onClick={() => handleFooterLinkClick("home")}>
+          <Link
+            className="icono-home"
+            to="/"
+            onClick={() => handleFooterLinkClick("home")}
+          >
             <img
               className="logo-footer-desktop"
               src="Logo@3x.svg"
@@ -123,9 +127,13 @@ const Footer = () => {
           </a>
         </div>
         <div className="logo-copyright-container">
-          <Link to="/" onClick={() => handleFooterLinkClick("home")}>
+          <Link
+            className="icono-home"
+            to="/"
+            onClick={() => handleFooterLinkClick("home")}
+          >
             <img
-              className="logo-footer-mobile"
+              className="logo-footer-mobile "
               src="LogoFooterMobile@3x.svg"
               alt="Logo Climatecnico"
             />

@@ -132,9 +132,11 @@ const HeroES = () => {
                       placeholder="Teléfono"
                       required
                       pattern="^[0-9\s-]{9,}$"
+                      maxLength="9" // Limitar a 9 caracteres
                       value={formValues.phone}
                       onChange={handleInputChange}
                     />
+
                     {validationErrors.phone && (
                       <div className="validator-message-box">
                         <p className="validator-message">
