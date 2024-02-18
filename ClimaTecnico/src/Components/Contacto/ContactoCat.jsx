@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Modal from "../Modal/Modal";
 import "./Contacto.css";
 import { useForm } from "@formspree/react";
+import CustomSelect from "../CustomSelect";
 
 const ContactoCat = () => {
   const [state, handleSubmit] = useForm("xkndndyd");
@@ -105,7 +106,7 @@ const ContactoCat = () => {
     }
 
     if (Object.keys(errors).length === 0) {
-      await handleSubmit(e);
+      await handleSubmit(formValues);
 
       // Abre el modal
       setIsModalOpen(true);
@@ -131,6 +132,12 @@ const ContactoCat = () => {
     setFormValues({
       ...formValues,
       [name]: value,
+    });
+  };
+  const handleServicioSelect = (option) => {
+    setFormValues({
+      ...formValues,
+      ["servicio"]: option.value,
     });
   };
   return (
@@ -279,41 +286,59 @@ const ContactoCat = () => {
                     )}
                   </div>
                 </div>
-                <div className="formulario-inputs-validation-box">
-                  <select
-                    className="formulario-input-select"
-                    name="servicio"
-                    required
-                    value={formValues.servicio}
-                    onChange={handleInputChange}
-                  >
-                    <option className="placeholder-dropdown" value="" disabled>
-                      Interessat en...
-                    </option>
-                    <option value="Mantenimiento, instalación y reparación">
-                      Manteniment, instal·lació i reparació
-                    </option>
-                    <option value="Aire acondicionado">
-                      Aire acondicionat
-                    </option>
-                    <option value="Calefacción">Calefacció</option>
-                    <option value="Suelo Radiante">Sòl Radiant</option>
-                    <option value="Domótica">Domòtica</option>
-                    <option value="Aerotermia">Aerotèrmia</option>
-                    <option value="Refrigeración de CPD">
-                      Refrigeració de CPD
-                    </option>
-                    <option value="Frío industrial">Fred industrial</option>
-                    <option value="Placas solares">Plaques solars</option>
-                  </select>
-                  {validationErrors.servicio && (
-                    <div className="validator-message-box">
-                      <p className="validator-message">
-                        {validationErrors.servicio}
-                      </p>
-                    </div>
-                  )}
+                <div className="formulario-inputs-box">
+                  <div className="formulario-inputs-validation-box">
+                    {/* Utiliza el componente CustomSelect en lugar del select nativo */}
+                    <CustomSelect
+                      name="servicio"
+                      options={[
+                        {
+                          label: "Manteniment, instal·lació i reparació",
+                          value: "Mantenimiento, instalación y reparación",
+                        },
+                        {
+                          label: "Aire acondicionat",
+                          value: "Aire acondicionado",
+                        },
+                        { label: "Calefacció", value: "Calefacción" },
+
+                        {
+                          label: "Sòl Radiant",
+                          value: "Suelo Radiante",
+                        },
+                        {
+                          label: "Domòtica",
+                          value: "Domótica",
+                        },
+                        {
+                          label: "Aerotèrmia",
+                          value: "Aerotermia",
+                        },
+                        {
+                          label: "Refrigeració de CPD",
+                          value: "Refrigeración de CPD",
+                        },
+                        {
+                          label: "Fred industrial",
+                          value: "Frío industrial",
+                        },
+                        {
+                          label: "Plaques solares",
+                          value: "Placas solares",
+                        },
+                      ]}
+                      onSelect={handleServicioSelect}
+                    />
+                    {validationErrors.servicio && (
+                      <div className="validator-message-box">
+                        <p className="validator-message">
+                          {validationErrors.servicio}
+                        </p>
+                      </div>
+                    )}
+                  </div>
                 </div>
+
                 <div className="formulario-inputs-validation-box">
                   <textarea
                     className="formulario-textarea"

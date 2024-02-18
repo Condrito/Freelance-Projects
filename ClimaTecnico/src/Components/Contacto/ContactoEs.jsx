@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Modal from "../Modal/Modal";
 import "./Contacto.css";
 import { useForm } from "@formspree/react";
+import CustomSelect from "../CustomSelect";
 
 const ContactoEs = () => {
   const [state, handleSubmit] = useForm("xkndndyd");
@@ -64,7 +65,6 @@ const ContactoEs = () => {
       );
     }
 
-    // Validación específica para el código postal
     if (!formValues.postalCode.match(/^[0-9]{5}$/)) {
       errors.postalCode = (
         <div className="error-box">
@@ -105,19 +105,17 @@ const ContactoEs = () => {
     }
 
     if (Object.keys(errors).length === 0) {
-      await handleSubmit(e);
+      await handleSubmit(formValues);
 
-      // Abre el modal
       setIsModalOpen(true);
 
-      // Reinicia los valores de los campos del formulario
       setFormValues({
         name: "",
         email: "",
         phone: "",
         postalCode: "",
         message: "",
-        servicio: "", // Reiniciar el valor del dropdown
+        servicio: "",
       });
     } else {
       setValidationErrors(errors);
@@ -127,12 +125,19 @@ const ContactoEs = () => {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
 
-    // Verificar si el valor seleccionado no es el placeholder
     setFormValues({
       ...formValues,
       [name]: value,
     });
   };
+
+  const handleServicioSelect = (option) => {
+    setFormValues({
+      ...formValues,
+      ["servicio"]: option.value,
+    });
+  };
+
   return (
     <>
       <div className="contacto-content-container">
@@ -146,7 +151,7 @@ const ContactoEs = () => {
           </div>
         </div>
         <div className="contacto-hero-container">
-          <h1>¿quieres transformar tu ambiente?</h1>
+          <h1>¿Quieres transformar tu ambiente?</h1>
           <div className="text-hero-subtitle">
             <p>
               Contacta con nosotros para que podamos asesorarte y ofrecerte la
@@ -170,7 +175,6 @@ const ContactoEs = () => {
             src="Phone-contacto@3x.svg"
             alt="icono phone"
           />
-
           <h4>611 712 312</h4>
         </a>
         <a
@@ -182,7 +186,6 @@ const ContactoEs = () => {
             src="Instagram-contacto@3x.svg"
             alt="icono instagram"
           />
-
           <h4>@climatecnico</h4>
         </a>
       </div>
@@ -280,32 +283,38 @@ const ContactoEs = () => {
                   </div>
                 </div>
                 <div className="formulario-inputs-validation-box">
-                  <select
+                  <CustomSelect
                     className="formulario-input-select"
                     name="servicio"
-                    required
-                    value={formValues.servicio}
-                    onChange={handleInputChange}
-                  >
-                    <option className="placeholder-dropdown" value="" disabled>
-                      Interesado en...
-                    </option>
-                    <option value="Mantenimiento, instalación y reparación">
-                      Mantenimiento, instalación y reparación
-                    </option>
-                    <option value="Aire acondicionado">
-                      Aire acondicionado
-                    </option>
-                    <option value="Calefacción">Calefacción</option>
-                    <option value="Suelo Radiante">Suelo Radiante</option>
-                    <option value="Domótica">Domótica</option>
-                    <option value="Aerotermia">Aerotermia</option>
-                    <option value="Refrigeración de CPD">
-                      Refrigeración de CPD
-                    </option>
-                    <option value="Frío industrial">Frío industrial</option>
-                    <option value="Placas solares">Placas solares</option>
-                  </select>
+                    options={[
+                      { label: "Interesado en...", value: "" },
+                      {
+                        label: "Mantenimiento, instalación y reparación",
+                        value: "Mantenimiento, instalación y reparación",
+                      },
+                      {
+                        label: "Aire acondicionado",
+                        value: "Aire acondicionado",
+                      },
+                      { label: "Calefacción", value: "Calefacción" },
+                      {
+                        label: "Suelo Radiante",
+                        value: "Suelo Radiante",
+                      },
+                      { label: "Domótica", value: "Domótica" },
+                      { label: "Aerotermia", value: "Aerotermia" },
+                      {
+                        label: "Refrigeración de CPD",
+                        value: "Refrigeración de CPD",
+                      },
+                      {
+                        label: "Frío industrial",
+                        value: "Frío industrial",
+                      },
+                      { label: "Placas solares", value: "Placas solares" },
+                    ]}
+                    onSelect={handleServicioSelect}
+                  />
                   {validationErrors.servicio && (
                     <div className="validator-message-box">
                       <p className="validator-message">
@@ -320,7 +329,7 @@ const ContactoEs = () => {
                     name="message"
                     placeholder="Cuéntanos más"
                     value={formValues.message}
-                    style={{ resize: "none" }} // Evitar redimensionamiento
+                    style={{ resize: "none" }}
                     onChange={handleInputChange}
                   />
                   {validationErrors.message && (
