@@ -5,7 +5,6 @@
 
 
 
-
 /* Media query para desktop */
 
 @media (min-width: 1024px) {
@@ -120,11 +119,15 @@ flex-shrink: 0;
 border-radius: 8px;
 border: 1px solid var(--Neutral-200, #EEE);
 background: var(--Neutral-100, #FFF);
+cursor: pointer;
+
+
 
 /* Card shadow */
 box-shadow: 4px 4px 12px 0px #D8E5EE;
       }
       .proyectos-card-container>img{
+        
         display: flex;
 height: 276px;
 flex-direction: column;
@@ -144,6 +147,7 @@ font-style: normal;
 font-weight: 600;
 line-height: 24px; /* 150% */
 align-self: stretch;
+
       }
       .proyectos-container {
         max-width: 960px; /* Limita el ancho máximo del contenedor */
@@ -265,6 +269,7 @@ flex-shrink: 0;
 border-radius: 8px;
 border: 1px solid var(--Neutral-200, #EEE);
 background: var(--Neutral-100, #FFF);
+cursor: pointer;
 
 /* Card shadow */
 box-shadow: 4px 4px 12px 0px #D8E5EE;
