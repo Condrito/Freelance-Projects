@@ -5,7 +5,7 @@ import { useForm } from "@formspree/react";
 import CustomSelect from "../CustomSelect";
 
 const ContactoCat = () => {
-  const [state, handleSubmit] = useForm("xkndndyd");
+  const [state, handleSubmit] = useForm("xqkrdbol");
   const [validationErrors, setValidationErrors] = useState({});
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formValues, setFormValues] = useState({
@@ -171,8 +171,8 @@ const ContactoCat = () => {
         <a className="datos-contacto-box" href="tel:611712312">
           <img
             className="contacto-icon"
-            src="Phone-contacto@3x.svg"
-            alt="icono phone"
+            src="Whatsapp@3x.svg"
+            alt="icono whatsapp"
           />
 
           <h4>611 712 312</h4>
@@ -188,6 +188,19 @@ const ContactoCat = () => {
           />
 
           <h4>@tecnoclimatización</h4>
+        </a>
+        <a
+          className="datos-contacto-box"
+          href="https://www.google.com/maps/search/?api=1&query=C/Violinista+Vellsolà,+3+Local,+08222+Terrassa"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="contacto-icon"
+            src="Location@3x.svg"
+            alt="icono ubicación"
+          />
+          <h4>C/Violinista Vellsolà, 3 Local, 08222 Terrassa</h4>
         </a>
       </div>
       <div className="contacto-formulario-container">

@@ -4,7 +4,7 @@ const DescripcionCat = () => {
   return (
     <div id="descripcion" className="descripcion">
       <h2>
-        Tecnoclima, la teva elecció de confiança per transformar ambients.
+        Tecno clima, la teva elecció de confiança per transformar ambients.
       </h2>
       <p>
         Tenim una sòlida trajectòria, amb més de 15 anys d'experiència en el
