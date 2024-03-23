@@ -15,6 +15,7 @@ header{
 .header-container{
     display: flex;
     width: calc(100% - 96px);
+    height: calc(124px - 16px);
     padding: 8px 48px;
     justify-content: space-between;
     align-items: center;
